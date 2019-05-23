@@ -2,7 +2,7 @@ import { IStyle, ITheme } from '@uifabric/styling';
 import { DirectionalHint } from '@uifabric/utilities';
 import { IPoint, IRectangle } from '@uifabric/utilities';
 import { ICalloutPositionedInfo } from '@uifabric/utilities/positioning';
-import { ILayerProps } from '../../components';
+import { ILayerProps } from '../Layer';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 
 

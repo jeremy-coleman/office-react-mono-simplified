@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Position } from '@uifabric/utilities/positioning';
-import { IIconProps } from '../../components';
+import { IIconProps } from '../Icon';
 import { ITheme, IStyle } from '@uifabric/styling';
 import { ISpinButtonClassNames } from './SpinButton.classNames';
 import { KeyboardSpinDirection } from './SpinButton';

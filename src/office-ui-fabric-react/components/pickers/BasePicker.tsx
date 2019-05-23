@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { BaseComponent, KeyCodes, css, elementContains, getId, classNamesFunction, styled } from '@uifabric/utilities';
 import { IProcessedStyleSet } from '@uifabric/styling';
-import { IFocusZone, FocusZone, FocusZoneDirection } from '../../components';
-import { Callout, DirectionalHint } from '../../components';
+import { IFocusZone, FocusZone, FocusZoneDirection } from '../FocusZone';
+import { Callout, DirectionalHint } from '../Callout';
 import { Selection, SelectionMode } from '@uifabric/utilities';
 import { Suggestions } from './Suggestions/Suggestions';
 import { ISuggestions, ISuggestionsProps, ISuggestionsStyleProps, ISuggestionsStyles } from './Suggestions/Suggestions.types';

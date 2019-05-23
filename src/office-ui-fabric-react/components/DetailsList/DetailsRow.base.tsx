@@ -5,7 +5,7 @@ import { IColumn, CheckboxVisibility } from './DetailsList.types';
 import { DetailsRowCheck } from './DetailsRowCheck';
 import { GroupSpacer } from '../GroupedList/GroupSpacer';
 import { DetailsRowFields } from './DetailsRowFields';
-import { FocusZone, FocusZoneDirection, IFocusZone } from '../../components';
+import { FocusZone, FocusZoneDirection, IFocusZone } from '../FocusZone';
 import { SelectionMode, SELECTION_CHANGE } from '@uifabric/utilities/selection/interfaces';
 import { CollapseAllVisibility } from '../GroupedList';
 import { IDragDropOptions } from '@uifabric/utilities';

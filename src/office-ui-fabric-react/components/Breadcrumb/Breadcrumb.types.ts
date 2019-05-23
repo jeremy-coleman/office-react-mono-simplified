@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { IIconProps } from '../../components';
+import { IIconProps } from '../Icon';
 import { IRefObject, IRenderFunction, IComponentAs } from '@uifabric/utilities';
 import { ITheme, IStyle } from '@uifabric/styling';
-import { IFocusZoneProps } from '../../components';
+import { IFocusZoneProps } from '../FocusZone';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 /**
  * {@docCategory Breadcrumb}

@@ -2,8 +2,8 @@ import * as React from 'react';
 import { BaseComponent, KeyCodes, css, getId, getRTL, getRTLSafeKeyCode, format, IRefObject, findIndex, find } from '@uifabric/utilities';
 import { ICalendarStrings, ICalendarIconStrings, ICalendarFormatDateCallbacks } from './Calendar.types';
 import { DayOfWeek, FirstWeekOfYear, DateRangeType } from '@uifabric/utilities/dateValues/DateValues';
-import { FocusZone } from '../../components';
-import { Icon } from '../../components';
+import { FocusZone } from '../FocusZone';
+import { Icon } from '../Icon';
 import {
   addDays,
   addWeeks,

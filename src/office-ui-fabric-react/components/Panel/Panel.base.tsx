@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { IconButton } from '../../components';
-import { Layer } from '../../components';
-import { Overlay } from '../../components';
-import { Popup } from '../../Popup';
+import { IconButton } from '../Button';
+import { Layer } from '../Layer';
+import { Overlay } from '../Overlay';
+import { Popup } from '../Popup';
 import { getTheme, IconFontSizes, IProcessedStyleSet } from '@uifabric/styling';
 import {
   allowScrollOnElement,

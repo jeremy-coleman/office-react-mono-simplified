@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IStyle } from '@uifabric/styling';
 import { IRenderFunction } from '@uifabric/utilities';
-import { IPersonaSharedProps } from '../../components';
+import { IPersonaSharedProps } from '../Persona';
 
 /**
  * {@docCategory ActivityItem}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import { CollapseAllVisibility } from '../GroupedList';
-import { ITooltipHostProps } from '../../components';
+import { ITooltipHostProps } from '../Tooltip';
 import { ITheme, IStyle } from '@uifabric/styling';
 import { DetailsHeaderBase } from './DetailsHeader.base';
 import { IColumn, DetailsListLayoutMode, IColumnReorderOptions, ColumnDragEndLocation } from './DetailsList.types';

@@ -20,12 +20,12 @@ import { IDetailsFooterProps } from '../DetailsList/DetailsFooter.types';
 import { DetailsRowBase } from '../DetailsList/DetailsRow.base';
 import { DetailsRow } from '../DetailsList/DetailsRow';
 import { IDetailsRowProps } from '../DetailsList/DetailsRow.types';
-import { IFocusZone, FocusZone, FocusZoneDirection } from '../../components';
+import { IFocusZone, FocusZone, FocusZoneDirection } from '../FocusZone';
 import { IObjectWithKey, ISelection, Selection, SelectionMode, SelectionZone } from '@uifabric/utilities/selection/index';
 
 import { DragDropHelper } from '@uifabric/utilities/dragdrop/DragDropHelper';
 import { IGroupedList, GroupedList, IGroupDividerProps, IGroupRenderProps } from '../../GroupedList';
-import { List, IListProps, ScrollToMode } from '../../components';
+import { List, IListProps, ScrollToMode } from '../List';
 import { withViewport } from '@uifabric/utilities/decorators/withViewport';
 import { GetGroupCount } from '@uifabric/utilities/groupedList/GroupedListUtility';
 import { DEFAULT_CELL_STYLE_PROPS } from './DetailsRow.styles';

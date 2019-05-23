@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BaseComponent } from '@uifabric/utilities';
 import { ComboBox } from './ComboBox';
 import { IComboBoxProps, IComboBox } from './ComboBox.types';
-import { IList, List } from '../../components';
+import { IList, List } from '../List';
 import { ISelectableOption } from '@uifabric/utilities/selectableOption/SelectableOption.types';
 
 export class VirtualizedComboBox extends BaseComponent<IComboBoxProps, {}> implements IComboBox {

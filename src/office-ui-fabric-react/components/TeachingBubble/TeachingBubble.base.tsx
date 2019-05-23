@@ -7,7 +7,7 @@ import {
   ITeachingBubbleStyles,
   ITeachingBubbleSubComponentStyles
 } from './TeachingBubble.types';
-import { Callout, ICalloutProps } from '../../components';
+import { Callout, ICalloutProps } from '../Callout';
 import { DirectionalHint } from '@uifabric/utilities';
 
 const getClassNames = classNamesFunction<ITeachingBubbleStyleProps, ITeachingBubbleStyles>();

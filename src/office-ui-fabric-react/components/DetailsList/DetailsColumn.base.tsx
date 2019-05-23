@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Icon } from '../../components';
+import { Icon } from '../Icon';
 import { BaseComponent, IRenderFunction, IDisposable, classNamesFunction, IClassNames } from '@uifabric/utilities';
 import { IColumn, ColumnActionsMode } from './DetailsList.types';
 
-import { ITooltipHostProps } from '../../components';
+import { ITooltipHostProps } from '../Tooltip';
 import { IDragDropOptions } from '@uifabric/utilities';
 import { IDetailsColumnStyles } from './DetailsColumn.types';
 import { DEFAULT_CELL_STYLE_PROPS } from './DetailsRow.styles';

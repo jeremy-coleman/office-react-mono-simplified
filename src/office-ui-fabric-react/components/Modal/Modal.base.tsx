@@ -3,8 +3,8 @@ import { BaseComponent, classNamesFunction, getId, allowScrollOnElement, KeyCode
 import { FocusTrapZone, IFocusTrapZone } from '../FocusTrapZone/index';
 import { animationDuration } from './Modal.styles';
 import { IModalProps, IModalStyleProps, IModalStyles, IModal } from './Modal.types';
-import { Overlay } from '../../components';
-import { ILayerProps, Layer } from '../../components';
+import { Overlay } from '../Overlay';
+import { ILayerProps, Layer } from '../Layer';
 import { Popup } from '../Popup/index';
 import { withResponsiveMode, ResponsiveMode } from '@uifabric/utilities/decorators/withResponsiveMode';
 import { DirectionalHint } from '../Callout/index';

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { IFocusTrapZoneProps } from '../../components';
-import { ILayerProps } from '../../components';
+import { IFocusTrapZoneProps } from '../FocusTrapZone';
+import { ILayerProps } from '../Layer';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import { PanelBase } from './Panel.base';

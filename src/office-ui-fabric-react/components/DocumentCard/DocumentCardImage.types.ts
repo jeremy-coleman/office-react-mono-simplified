@@ -1,5 +1,5 @@
-import { IIconProps } from '../../components';
-import { ImageFit } from '../../components';
+import { IIconProps } from '../Icon';
+import { ImageFit } from '../Image';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IBaseProps, IRefObject } from '@uifabric/utilities';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';

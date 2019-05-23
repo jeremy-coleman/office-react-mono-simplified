@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import { BaseComponent, css, nullRender } from '@uifabric/utilities';
 import { ICommandBar, ICommandBarItemProps, ICommandBarProps, ICommandBarStyleProps, ICommandBarStyles } from './CommandBar.types';
-import { IOverflowSet, OverflowSet } from '../../components';
-import { IResizeGroup, ResizeGroup } from '../../components';
-import { FocusZone, FocusZoneDirection } from '../../components';
+import { IOverflowSet, OverflowSet } from '../OverflowSet';
+import { IResizeGroup, ResizeGroup } from '../ResizeGroup';
+import { FocusZone, FocusZoneDirection } from '../FocusZone';
 import { classNamesFunction } from '@uifabric/utilities';
-import { CommandBarButton, IButtonProps } from '../../components';
-import { TooltipHost } from '../../components';
+import { CommandBarButton, IButtonProps } from '../Button';
+import { TooltipHost } from '../Tooltip';
 
 const getClassNames = classNamesFunction<ICommandBarStyleProps, ICommandBarStyles>();
 

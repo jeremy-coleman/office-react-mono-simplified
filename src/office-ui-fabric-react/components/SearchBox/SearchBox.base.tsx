@@ -2,8 +2,8 @@ import * as React from 'react';
 import { ISearchBoxProps, ISearchBoxStyleProps, ISearchBoxStyles } from './SearchBox.types';
 import { BaseComponent, getId, KeyCodes, classNamesFunction, getNativeProps, inputProperties } from '@uifabric/utilities';
 
-import { IconButton } from '../../components';
-import { Icon } from '../../components';
+import { IconButton } from '../Button';
+import { Icon } from '../Icon';
 
 const getClassNames = classNamesFunction<ISearchBoxStyleProps, ISearchBoxStyles>();
 

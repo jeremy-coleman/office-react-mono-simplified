@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Autofill } from '../../Autofill';
-import { IInputProps } from '../../components';
-import { IBaseFloatingPickerProps } from '../../components';
-import { IBaseSelectedItemsListProps } from '../../SelectedItemsList';
+//import { IInputProps } from '../components';
+//import { IBaseFloatingPickerProps } from '../components';
+//import { IBaseSelectedItemsListProps } from '../../SelectedItemsList';
 import { IRefObject } from '@uifabric/utilities';
-import { IFocusZoneProps } from '../../components';
+import { IFocusZoneProps } from '../FocusZone';
 
 export interface IBaseExtendedPicker<T> {
   /** Forces the picker to resolve */

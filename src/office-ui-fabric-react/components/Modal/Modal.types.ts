@@ -2,10 +2,10 @@ import * as React from 'react';
 import { ModalBase } from './Modal.base';
 import { IWithResponsiveModeState } from '@uifabric/utilities';
 import { IStyle, ITheme } from '@uifabric/styling';
-import { ILayerProps } from '../../components';
+import { ILayerProps } from '../Layer';
 import { IRefObject, IAccessiblePopupProps } from '@uifabric/utilities';
-import { IIconProps } from '../../components';
-import { IContextualMenuProps } from '../../components';
+import { IIconProps } from '../Icon';
+import { IContextualMenuProps } from '../ContextualMenu';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 
 

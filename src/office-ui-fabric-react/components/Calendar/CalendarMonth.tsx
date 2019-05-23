@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BaseComponent, KeyCodes, css, getRTL, IRefObject } from '@uifabric/utilities';
 import { ICalendarStrings, ICalendarIconStrings, ICalendarFormatDateCallbacks } from './Calendar.types';
-import { FocusZone } from '../../components';
+import { FocusZone } from '../FocusZone';
 import {
   addYears,
   setMonth,
@@ -11,7 +11,7 @@ import {
   getMonthEnd,
   compareDatePart
 } from '@uifabric/utilities/dateMath/DateMath';
-import { Icon } from '../../components';
+import { Icon } from '../Icon';
 import * as stylesImport from './Calendar.scss';
 import { CalendarYear, ICalendarYearRange } from './CalendarYear';
 const styles: any = stylesImport;

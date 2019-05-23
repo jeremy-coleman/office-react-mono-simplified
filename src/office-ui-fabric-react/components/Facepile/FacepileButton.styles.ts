@@ -1,6 +1,6 @@
 import { ITheme, concatStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
-import { IButtonStyles } from '../../components';
+import { IButtonStyles } from '../Button';
 import { getStyles as getBaseButtonStyles } from '../Button/BaseButton.styles';
 
 export const getStyles = memoizeFunction(

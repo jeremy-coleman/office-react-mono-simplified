@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { FocusZone, FocusZoneDirection, IFocusZone } from '../../components';
-import { IKeytipProps } from '../../components';
+import { FocusZone, FocusZoneDirection, IFocusZone } from '../FocusZone';
+import { IKeytipProps } from '../Keytip';
 import { BaseComponent, classNamesFunction, divProperties, elementContains, focusFirstChild, getNativeProps } from '@uifabric/utilities';
 import { IProcessedStyleSet } from '@uifabric/styling';
 import { KeytipManager } from '@uifabric/utilities/keytips/KeytipManager';

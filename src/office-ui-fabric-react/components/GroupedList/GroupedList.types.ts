@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { GroupedListBase } from './GroupedList.base';
-import { IList, IListProps } from '../../components';
+import { IList, IListProps } from '../List';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import { IDragDropContext, IDragDropEvents, IDragDropHelper } from '@uifabric/utilities/dragdrop/index';
 import { ISelection, SelectionMode } from '@uifabric/utilities/selection/index';

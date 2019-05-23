@@ -17,7 +17,7 @@ import { getWindow } from '@uifabric/utilities';
 
 // TODO -Issue #5689: Comment in once Button is converted to mergeStyles
 // import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
-// import { IButtonStyles, IButtonStyleProps } from '../../components';
+// import { IButtonStyles, IButtonStyleProps } from '../components';
 
 const GlobalClassNames = {
   root: 'ms-Panel',

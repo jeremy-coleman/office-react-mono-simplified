@@ -42,7 +42,7 @@ export * from "./OverflowSet";
 export * from "./Overlay";
 export * from "./Panel";
 export * from "./Persona";
-export * from "./pickers";
+export * from "./Pickers";
 export * from "./Pivot";
 export * from "./Popup";
 export * from "./ProgressIndicator";

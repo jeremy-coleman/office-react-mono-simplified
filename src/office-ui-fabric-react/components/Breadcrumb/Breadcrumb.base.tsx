@@ -4,11 +4,11 @@ import { IProcessedStyleSet } from '@uifabric/styling';
 import { FocusZone, FocusZoneDirection } from '../FocusZone';
 import { Link } from '../Link';
 import { Icon } from '../Icon';
-import { IconButton } from '../IconButton';
+import { IconButton } from '../Button';
 import { IBreadcrumbProps, IBreadcrumbItem, IDividerAsProps, IBreadcrumbData } from './Breadcrumb.types';
 import { DirectionalHint } from '@uifabric/utilities';
 import { ResizeGroup } from '../ResizeGroup';
-import { TooltipHost, TooltipOverflowMode } from '../../components';
+import { TooltipHost, TooltipOverflowMode } from '../Tooltip';
 import { IBreadcrumbStyleProps, IBreadcrumbStyles } from './Breadcrumb.types';
 
 /** @deprecated Use IBreadcrumbData */

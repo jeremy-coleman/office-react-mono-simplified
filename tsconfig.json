@@ -12,6 +12,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "preserveConstEnums": true,
+    "forceConsistentCasingInFileNames": true,
     "lib": ["es2018", "dom"],
     "skipLibCheck": true,
   },

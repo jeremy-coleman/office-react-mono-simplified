@@ -4,10 +4,10 @@ import { Button } from './Button';
 import { IButtonClassNames } from './BaseButton.classNames';
 import { ISplitButtonClassNames } from './SplitButton/SplitButton.classNames';
 import { IRefObject, IRenderFunction, KeyCodes, IComponentAs } from '@uifabric/utilities';
-import { IContextualMenuProps } from '../../components';
-import { IIconProps } from '../../components';
+import { IContextualMenuProps } from '../ContextualMenu';
+import { IIconProps } from '../Icon';
 import { IStyle, ITheme } from '@uifabric/styling';
-import { IKeytipProps } from '../../components';
+import { IKeytipProps } from '../Keytip';
 
 /**
  * {@docCategory Button}

@@ -1,7 +1,7 @@
 import { FontSizes, FontWeights, IRawStyle, ITheme, concatStyleSets, getFocusStyle, HighContrastSelector } from '@uifabric/styling';
 import { IComboBoxOptionStyles, IComboBoxStyles } from './ComboBox.types';
 
-import { IButtonStyles } from '../../components';
+import { IButtonStyles } from '../Button';
 import { memoizeFunction } from '@uifabric/utilities';
 
 const ComboBoxHeight = 32;

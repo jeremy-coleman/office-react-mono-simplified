@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ICheckProps } from './Check.types';
-import { Icon } from '../../components';
+import { Icon } from '../Icon';
 import { classNamesFunction } from '@uifabric/utilities';
 import { ICheckStyleProps, ICheckStyles } from './Check.types';
 

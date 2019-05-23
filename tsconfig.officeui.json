@@ -9,13 +9,16 @@
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
+    "maxNodeModuleJsDepth": 1,
     "disableSizeLimit": true,
     "strictFunctionTypes":false,
     "moduleResolution": "node",
     "preserveConstEnums": true,
     "lib": ["es2018", "dom"],
     "skipLibCheck": true,
+    "emitDeclarationOnly": true
   },
+  "files":["./src/office-ui-fabric-react/components/index.ts"],
   "include": ["./src/office-ui-fabric-react/components"],
   "exclude": ["node_modules"]
 }

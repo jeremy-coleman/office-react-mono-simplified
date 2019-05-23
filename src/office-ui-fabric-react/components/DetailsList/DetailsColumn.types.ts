@@ -1,7 +1,7 @@
 import { IColumn } from './DetailsList.types';
 import { DetailsColumnBase } from './DetailsColumn.base';
 import { IRenderFunction } from '@uifabric/utilities';
-import { ITooltipHostProps } from '../../components';
+import { ITooltipHostProps } from '../Tooltip';
 import { IDragDropHelper } from '@uifabric/utilities/dragdrop/index';
 import { ICellStyleProps } from './DetailsRow.types';
 import { ITheme, IStyle } from '@uifabric/styling';

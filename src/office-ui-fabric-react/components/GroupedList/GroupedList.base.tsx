@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BaseComponent, classNamesFunction, IClassNames } from '@uifabric/utilities';
 import { IGroupedList, IGroupedListProps, IGroup, IGroupedListStyleProps, IGroupedListStyles } from './GroupedList.types';
 import { GroupedListSection } from './GroupedListSection';
-import { List, ScrollToMode, IListProps } from '../../components';
+import { List, ScrollToMode, IListProps } from '../List';
 import { SelectionMode } from '@uifabric/utilities/selection';
 import { DEFAULT_ROW_HEIGHTS } from '../DetailsList/DetailsRow.styles';
 import { IGroupHeaderProps } from './GroupHeader';

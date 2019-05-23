@@ -1,4 +1,4 @@
-import { PersonaInitialsColor } from '../../components';
+import { PersonaInitialsColor } from '../Persona';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject } from '@uifabric/utilities';
 import { DocumentCardActivityBase } from './DocumentCardActivity.base';

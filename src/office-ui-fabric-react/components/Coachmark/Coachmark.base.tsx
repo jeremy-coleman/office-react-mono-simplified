@@ -21,7 +21,7 @@ import { DirectionalHint } from '@uifabric/utilities';
 // Coachmark
 import { ICoachmark, ICoachmarkProps, ICoachmarkStyles, ICoachmarkStyleProps } from './Coachmark.types';
 import { COACHMARK_HEIGHT, COACHMARK_WIDTH } from './Coachmark.styles';
-import { FocusTrapZone } from '../../components';
+import { FocusTrapZone } from '../FocusTrapZone';
 
 const getClassNames = classNamesFunction<ICoachmarkStyleProps, ICoachmarkStyles>();
 

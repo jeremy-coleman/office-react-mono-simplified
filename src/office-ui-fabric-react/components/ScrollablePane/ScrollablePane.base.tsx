@@ -8,7 +8,7 @@ import {
   IScrollablePaneStyles,
   ScrollablePaneContext
 } from './ScrollablePane.types';
-import { Sticky } from '../../components';
+import { Sticky } from '../Sticky';
 
 export interface IScrollablePaneState {
   stickyTopHeight: number;

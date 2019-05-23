@@ -1,4 +1,4 @@
-import { IButtonProps } from '../../components';
+import { IButtonProps } from '../Button';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject } from '@uifabric/utilities';
 import { DocumentCardActionsBase } from './DocumentCardActions.base';

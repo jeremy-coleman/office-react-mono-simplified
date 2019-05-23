@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BaseComponent, DelayedRender, getId, classNamesFunction, getNativeProps, htmlElementProperties } from '@uifabric/utilities';
-import { IconButton } from '../../components';
-import { Icon } from '../../components';
+import { IconButton } from '../Button';
+import { Icon } from '../Icon';
 import { IMessageBarProps, IMessageBarStyleProps, IMessageBarStyles, MessageBarType } from './MessageBar.types';
 
 const getClassNames = classNamesFunction<IMessageBarStyleProps, IMessageBarStyles>();

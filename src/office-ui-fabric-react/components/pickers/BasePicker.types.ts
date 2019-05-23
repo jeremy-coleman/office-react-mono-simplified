@@ -3,9 +3,9 @@ import { IPickerItemProps } from './PickerItem.types';
 import { IRefObject } from '@uifabric/utilities';
 import { ISuggestionModel, ISuggestionsProps } from './Suggestions/Suggestions.types';
 import { BaseAutoFill } from './AutoFill/BaseAutoFill';
-import { ICalloutProps } from '../../components';
+import { ICalloutProps } from '../Callout';
 import { ITheme, IStyle } from '@uifabric/styling';
-import { ISuggestionItemProps } from '../pickers/Suggestions/SuggestionsItem.types';
+import { ISuggestionItemProps } from '../Pickers/Suggestions/SuggestionsItem.types';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 /**
  * BasePicker component.

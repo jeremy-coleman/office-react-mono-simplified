@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Icon } from '../../components';
+import { Icon } from '../Icon';
 import { IProcessedStyleSet } from '@uifabric/styling';
 import { BaseComponent, classNamesFunction } from '@uifabric/utilities';
 import { IDocumentCardLogoProps, IDocumentCardLogoStyleProps, IDocumentCardLogoStyles } from './DocumentCardLogo.types';

@@ -1,5 +1,5 @@
 import { AnimationClassNames, FontSizes, getGlobalClassNames, HighContrastSelector, IStyle, normalize } from '@uifabric/styling';
-import { ILabelStyles, ILabelStyleProps } from '../../components';
+import { ILabelStyles, ILabelStyleProps } from '../Label';
 import { ITextFieldStyleProps, ITextFieldStyles } from './TextField.types';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 

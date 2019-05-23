@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BaseButton, IButtonProps } from '../../components';
+import { BaseButton, IButtonProps } from '../Button';
 import { BaseComponent, customizable, nullRender } from '@uifabric/utilities';
 import { getStyles } from './FacepileButton.styles';
 

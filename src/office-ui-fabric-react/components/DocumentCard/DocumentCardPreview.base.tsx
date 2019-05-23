@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Icon } from '../../components';
-import { Image } from '../../components';
+import { Icon } from '../Icon';
+import { Image } from '../Image';
 import { Link } from '../../Link';
 import { IProcessedStyleSet } from '@uifabric/styling';
 import { BaseComponent, classNamesFunction, css } from '@uifabric/utilities';

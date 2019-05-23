@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { BaseComponent, classNamesFunction } from '@uifabric/utilities';
 import { IDocumentCardStatusProps, IDocumentCardStatusStyleProps, IDocumentCardStatusStyles } from './DocumentCardStatus.types';
-import { Icon } from '../../components';
+import { Icon } from '../Icon';
 import { IProcessedStyleSet } from '@uifabric/styling';
 
 const getClassNames = classNamesFunction<IDocumentCardStatusStyleProps, IDocumentCardStatusStyles>();

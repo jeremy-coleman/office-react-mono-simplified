@@ -3,7 +3,7 @@ import { warnDeprecations, classNamesFunction, getId } from '@uifabric/utilities
 import { IDialogProps, IDialogStyleProps, IDialogStyles } from './Dialog.types';
 import { DialogType, IDialogContentProps } from './DialogContent.types';
 import { Modal, IModalProps, IDragOptions } from '../../Modal';
-import { ILayerProps } from '../../components';
+import { ILayerProps } from '../Layer';
 import { withResponsiveMode } from '@uifabric/utilities/decorators/withResponsiveMode';
 
 const getClassNames = classNamesFunction<IDialogStyleProps, IDialogStyles>();

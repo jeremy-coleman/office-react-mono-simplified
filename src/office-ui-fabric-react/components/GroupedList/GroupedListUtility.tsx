@@ -1,4 +1,4 @@
-import { IGroup } from '../../components/GroupedList/GroupedList.types';
+import { IGroup } from './GroupedList.types';
 
 /**
  * Takes an array of groups and returns a count of the groups and all descendant groups.

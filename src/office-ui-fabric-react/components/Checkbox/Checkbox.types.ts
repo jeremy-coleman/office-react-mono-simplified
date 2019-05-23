@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import { IIconProps } from '../Icon/Icon.types';
-import { IKeytipProps } from '../../components';
+import { IKeytipProps } from '../Keytip';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 
 

@@ -3,7 +3,7 @@ import { LinkBase } from './Link.base';
 
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject } from '@uifabric/utilities';
-import { IKeytipProps } from '../../components';
+import { IKeytipProps } from '../Keytip';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 
 /**

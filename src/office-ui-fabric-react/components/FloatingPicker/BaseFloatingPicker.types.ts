@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { ISuggestionModel } from '../../components';
+//import { ISuggestionModel } from './Suggestions';
 import { ISuggestionsControlProps } from './Suggestions/Suggestions.types';
 import { SuggestionsStore } from './Suggestions/SuggestionsStore';
 import { IRefObject } from '@uifabric/utilities';
-import { ISuggestionItemProps } from '../pickers/Suggestions/SuggestionsItem.types';
+import { ISuggestionItemProps } from '../Pickers/Suggestions/SuggestionsItem.types';
 
 export interface IBaseFloatingPicker {
   /** Whether the suggestions are shown */

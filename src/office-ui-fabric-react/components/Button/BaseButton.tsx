@@ -12,13 +12,13 @@ import {
   mergeAriaAttributeValues,
   portalContainsElement
 } from '@uifabric/utilities';
-import { Icon } from '../../components';
+import { Icon } from '../Icon';
 import { DirectionalHint } from '@uifabric/utilities';
-import { ContextualMenu, IContextualMenuProps } from '../../components';
+import { ContextualMenu, IContextualMenuProps } from '../ContextualMenu';
 import { IButtonProps, IButton } from './Button.types';
 import { IButtonClassNames, getBaseButtonClassNames } from './BaseButton.classNames';
 import { getClassNames as getBaseSplitButtonClassNames, ISplitButtonClassNames } from './SplitButton/SplitButton.classNames';
-import { KeytipData } from '../../components';
+import { KeytipData } from '../KeytipData';
 
 /**
  * {@docCategory Button}

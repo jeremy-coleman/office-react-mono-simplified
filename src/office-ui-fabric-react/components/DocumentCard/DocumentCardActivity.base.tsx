@@ -7,8 +7,8 @@ import {
   IDocumentCardActivityStyles
 } from './DocumentCardActivity.types';
 import { IProcessedStyleSet } from '@uifabric/styling';
-import { PersonaSize } from '../../components';
-import { PersonaCoin } from '../../PersonaCoin';
+import { PersonaSize } from '../Persona';
+import { PersonaCoin } from '../Persona/PersonaCoin';
 
 const getClassNames = classNamesFunction<IDocumentCardActivityStyleProps, IDocumentCardActivityStyles>();
 

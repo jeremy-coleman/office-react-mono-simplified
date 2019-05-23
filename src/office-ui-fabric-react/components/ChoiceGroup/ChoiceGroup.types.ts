@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { IIconProps } from '../../components';
+import { IIconProps } from '../Icon';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';

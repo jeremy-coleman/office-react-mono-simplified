@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BaseButton, Button } from '../../components';
+import { BaseButton, Button } from '../Button';
 import { ITheme, IStyle } from '@uifabric/styling';
 import { IRefObject } from '@uifabric/utilities';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';

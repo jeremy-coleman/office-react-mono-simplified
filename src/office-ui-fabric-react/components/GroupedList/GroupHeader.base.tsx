@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { classNamesFunction, IClassNames, getRTL } from '@uifabric/utilities';
 import { SelectionMode } from '@uifabric/utilities/selection/index';
-import { Check } from '../../components';
-import { Icon } from '../../components';
+import { Check } from '../Check';
+import { Icon } from '../Icon';
 import { GroupSpacer } from './GroupSpacer';
-import { Spinner } from '../../components';
-import { FocusZone, FocusZoneDirection } from '../../components';
+import { Spinner } from '../Spinner';
+import { FocusZone, FocusZoneDirection } from '../FocusZone';
 import { IGroupHeaderStyleProps, IGroupHeaderStyles, IGroupHeaderProps } from './GroupHeader.types';
 
 const getClassNames = classNamesFunction<IGroupHeaderStyleProps, IGroupHeaderStyles>();

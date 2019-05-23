@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { css, getId } from '@uifabric/utilities';
 import { IGridCellProps } from './GridCell.types';
-import { CommandButton } from '../../components';
+import { CommandButton } from '../Button';
 
 export class GridCell<T, P extends IGridCellProps<T>> extends React.Component<P, {}> {
   public static defaultProps = {

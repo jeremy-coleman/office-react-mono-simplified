@@ -3,11 +3,11 @@ import { IDatePicker, IDatePickerProps, IDatePickerStrings, IDatePickerStyleProp
 import { BaseComponent, KeyCodes, classNamesFunction, getId, getNativeProps, divProperties, css } from '@uifabric/utilities';
 import { Calendar, ICalendar, DayOfWeek } from '../Calendar';
 import { FirstWeekOfYear } from '@uifabric/utilities/dateValues/DateValues';
-import { Callout } from '../../components';
+import { Callout } from '../Callout';
 import { DirectionalHint } from '@uifabric/utilities';
 import { TextField, ITextField } from '../TextField';
 import { compareDates, compareDatePart } from '@uifabric/utilities/dateMath/DateMath';
-import { FocusTrapZone } from '../../components';
+import { FocusTrapZone } from '../FocusTrapZone';
 
 const getClassNames = classNamesFunction<IDatePickerStyleProps, IDatePickerStyles>();
 

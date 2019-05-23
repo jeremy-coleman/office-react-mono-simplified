@@ -11,7 +11,7 @@
     "build": "webpack --config=webpack.config.js ",
     "build2": "tsc -p tsconfig.json",
     "build:fabricui": "tsc -p tsconfig.fabricui.json",
-    "build:officeui": "tsc -p tsconfig.officeui.json",
+    "build:officeui": "tsc -p tsconfig.officeui.json ",
     "build3": "node ./node_modules/.bin/tsc -p tsconfig.json --max_old_space 4000"
   },
   "dependencies": {

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { IContextualMenuItem } from '../../components';
-import { IButtonStyles, IButtonProps } from '../../components';
+import { IContextualMenuItem } from '../ContextualMenu';
+import { IButtonStyles, IButtonProps } from '../Button';
 import { ICommandBarData } from './CommandBar.base';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject, IComponentAs } from '@uifabric/utilities';
-import { ITooltipHostProps } from '../../components';
+import { ITooltipHostProps } from '../Tooltip';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 
 

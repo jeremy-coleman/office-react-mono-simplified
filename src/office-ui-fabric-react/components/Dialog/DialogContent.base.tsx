@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BaseComponent, classNamesFunction } from '@uifabric/utilities';
 import { DialogType, IDialogContentProps, IDialogContentStyleProps, IDialogContentStyles } from './DialogContent.types';
-import { IconButton } from '../../components';
+import { IconButton } from '../Button';
 import { DialogFooter } from './DialogFooter';
 import { IDialogFooterProps } from './DialogFooter.types';
 import { withResponsiveMode } from '@uifabric/utilities/decorators/withResponsiveMode';

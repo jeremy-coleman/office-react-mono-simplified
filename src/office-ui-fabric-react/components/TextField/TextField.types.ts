@@ -1,6 +1,6 @@
 import { IStyle, IStyleSet, ITheme } from '@uifabric/styling';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
-import { IIconProps } from '../../components';
+import { IIconProps } from '../Icon';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 
 /**

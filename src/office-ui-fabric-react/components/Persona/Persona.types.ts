@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import { PersonaBase } from './Persona.base';
-import { ImageLoadState } from '../../components';
+import { ImageLoadState } from '../Image';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 import { PersonaCoinBase } from './PersonaCoin/PersonaCoin.base';

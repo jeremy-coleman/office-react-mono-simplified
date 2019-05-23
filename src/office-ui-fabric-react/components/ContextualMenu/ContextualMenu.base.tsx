@@ -8,7 +8,7 @@ import {
   IContextualMenuStyles
 } from './ContextualMenu.types';
 import { DirectionalHint } from '@uifabric/utilities';
-import { FocusZone, FocusZoneDirection, IFocusZoneProps, FocusZoneTabbableElements } from '../../components';
+import { FocusZone, FocusZoneDirection, IFocusZoneProps, FocusZoneTabbableElements } from '../FocusZone';
 import { IMenuItemClassNames, IContextualMenuClassNames } from './ContextualMenu.classNames';
 import { divProperties, getNativeProps } from '@uifabric/utilities';
 
@@ -32,7 +32,7 @@ import {
 } from '@uifabric/utilities';
 import { hasSubmenu, getIsChecked, isItemDisabled } from './contextualMenuUtility'
 import { withResponsiveMode, ResponsiveMode } from '@uifabric/utilities/decorators/withResponsiveMode';
-import { Callout, ICalloutContentStyleProps, ICalloutContentStyles } from '../../components';
+import { Callout, ICalloutContentStyleProps, ICalloutContentStyles } from '../Callout';
 import { ContextualMenu } from './ContextualMenu';
 import { ContextualMenuItem } from './ContextualMenuItem';
 import { ContextualMenuSplitButton, ContextualMenuButton, ContextualMenuAnchor } from './ContextualMenuItemWrapper/index';

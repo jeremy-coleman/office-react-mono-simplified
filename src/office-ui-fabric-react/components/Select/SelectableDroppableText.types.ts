@@ -1,6 +1,6 @@
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import * as React from 'react';
-import { ICalloutProps, IPanelProps } from '../../components';
+import { ICalloutProps, IPanelProps } from '../Callout';
 import { ISelectableOption } from './SelectableOption.types';
 
 /**

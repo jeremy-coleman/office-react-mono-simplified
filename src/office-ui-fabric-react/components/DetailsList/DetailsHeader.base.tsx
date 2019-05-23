@@ -9,16 +9,16 @@ import {
   IColumnReorderOptions,
   CheckboxVisibility
 } from './DetailsList.types';
-import { IFocusZone, FocusZone, FocusZoneDirection } from '../../components';
-import { Icon } from '../../components';
-import { Layer } from '../../components';
+import { IFocusZone, FocusZone, FocusZoneDirection } from '../FocusZone';
+import { Icon } from '../Icon';
+import { Layer } from '../Layer';
 import { GroupSpacer } from '../GroupedList/GroupSpacer';
 import { CollapseAllVisibility } from '../../GroupedList';
 import { DetailsRowCheck } from './DetailsRowCheck';
-import { ITooltipHostProps } from '../../components';
+import { ITooltipHostProps } from '../Tooltip';
 import { ISelection, SelectionMode, SELECTION_CHANGE } from '@uifabric/utilities/selection/interfaces';
 import { IDragDropOptions, DragDropHelper } from '@uifabric/utilities/dragdrop/index';
-import { DetailsColumn, IDetailsColumnProps } from '../../components/DetailsList/DetailsColumn';
+import { DetailsColumn, IDetailsColumnProps } from '../DetailsList/DetailsColumn';
 import { SelectAllVisibility, IDropHintDetails, IColumnReorderHeaderProps, IDetailsHeaderState } from './DetailsHeader.types';
 import { IDetailsHeaderStyleProps, IDetailsHeaderStyles, IDetailsHeader } from './DetailsHeader.types';
 import { classNamesFunction } from '@uifabric/utilities';

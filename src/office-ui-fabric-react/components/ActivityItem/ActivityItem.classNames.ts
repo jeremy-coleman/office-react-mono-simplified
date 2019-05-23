@@ -1,7 +1,7 @@
 import { mergeStyles } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { IActivityItemStyles } from './ActivityItem.types';
-import { IPersonaProps } from '../../components';
+import { IPersonaProps } from '../Persona';
 
 export interface IActivityItemClassNames {
   root?: string;

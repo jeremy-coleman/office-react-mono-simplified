@@ -1,4 +1,4 @@
-import { IButtonClassNames } from '../../components/Button/BaseButton.classNames';
+import { IButtonClassNames } from '../Button/BaseButton.classNames';
 import { ITheme } from '@uifabric/styling';
 
 export interface IGridCellProps<T> {

@@ -1,12 +1,12 @@
-import { IIconProps } from '../../components';
-import { ISelectableOption } from '@uifabric/utilities/selectableOption/SelectableOption.types';
-import { ISelectableDroppableTextProps } from '@uifabric/utilities/selectableOption/SelectableDroppableText.types';
+import { IIconProps } from '../Icon';
+import { ISelectableOption } from '../Select';
+import { ISelectableDroppableTextProps } from '../Select';
 import { IStyle, ITheme } from '@uifabric/styling';
-import { IButtonStyles } from '../../components';
+import { IButtonStyles } from '../Button';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import { IComboBoxClassNames } from './ComboBox.classNames';
-import { IKeytipProps } from '../../components';
-import { IAutofillProps } from '../pickers/AutoFill/BaseAutoFill.types';
+import { IKeytipProps } from '../Keytip';
+import { IAutofillProps } from '../Pickers/AutoFill/BaseAutoFill.types';
 
 /**
  * {@docCategory ComboBox}

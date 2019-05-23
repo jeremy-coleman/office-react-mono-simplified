@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { BaseComponent, classNamesFunction } from '@uifabric/utilities';
-import { Icon } from '../../components';
+import { Icon } from '../Icon';
 import { IDocumentCardActionsProps, IDocumentCardActionsStyleProps, IDocumentCardActionsStyles } from './DocumentCardActions.types';
-import { IconButton } from '../../components';
+import { IconButton } from '../Button';
 import { IProcessedStyleSet } from '@uifabric/styling';
 
 const getClassNames = classNamesFunction<IDocumentCardActionsStyleProps, IDocumentCardActionsStyles>();

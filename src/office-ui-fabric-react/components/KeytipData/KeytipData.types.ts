@@ -1,5 +1,5 @@
 import { IBaseProps } from '@uifabric/utilities';
-import { IKeytipProps } from '../../components';
+import { IKeytipProps } from '../Keytip';
 
 export interface IKeytip {}
 

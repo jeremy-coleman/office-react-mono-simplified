@@ -2,9 +2,9 @@ import * as React from 'react';
 import { FacepileBase } from './Facepile.base';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject } from '@uifabric/utilities';
-import { IButtonProps } from '../../components';
-import { IPersonaSharedProps, PersonaInitialsColor, PersonaSize } from '../../components';
-import { IKeytipProps } from '../../components';
+import { IButtonProps } from '../Button';
+import { IPersonaSharedProps, PersonaInitialsColor, PersonaSize } from '../Pesona';
+import { IKeytipProps } from '../Keyip';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 /**
  * {@docCategory Facepile}

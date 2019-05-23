@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { BaseComponent, KeyCodes, css } from '@uifabric/utilities';
-import { Autofill } from '../../Autofill';
-import { IInputProps } from '../../components';
+//import { Autofill } from '../Pickers/Autofill';
+//import { IInputProps } from '../Input';
 import * as stylesImport from './BaseExtendedPicker.scss';
 import { IBaseExtendedPickerProps, IBaseExtendedPicker } from './BaseExtendedPicker.types';
-import { IBaseFloatingPickerProps, BaseFloatingPicker } from '../../components';
-import { BaseSelectedItemsList, IBaseSelectedItemsListProps } from '../../SelectedItemsList';
-import { FocusZone, FocusZoneDirection } from '../../components';
-import { Selection, SelectionMode, SelectionZone } from '../../Selection';
+//import { IBaseFloatingPickerProps, BaseFloatingPicker } from '../components';
+//import { BaseSelectedItemsList, IBaseSelectedItemsListProps } from '../../SelectedItemsList';
+//import { FocusZone, FocusZoneDirection } from '../FocusZone';
+//import { Selection, SelectionMode, SelectionZone } from '../../Selection';
 // tslint:disable-next-line:no-any
 const styles: any = stylesImport;
 

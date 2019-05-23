@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IDetailsRowCheckProps, IDetailsCheckboxProps } from './DetailsRowCheck.types';
 import { css, styled } from '@uifabric/utilities';
-import { Check } from '../../components';
+import { Check } from '../Check';
 import { ICheckStyleProps, ICheckStyles } from '../Check/Check.types';
 import { getStyles as getCheckStyles } from '../Check/Check.styles';
 import { getStyles } from './DetailsRowCheck.styles';
