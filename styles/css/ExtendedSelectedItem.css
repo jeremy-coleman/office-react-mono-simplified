@@ -1,0 +1,142 @@
+.personaContainer {
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  background: '[theme:themeLighterAlt, default: #eff6fc]';
+  margin: 4px;
+  cursor: default;
+  user-select: none;
+  vertical-align: middle;
+}
+.personaContainer::-moz-focus-inner {
+  border: 0;
+}
+.personaContainer {
+  outline: transparent;
+  position: relative;
+}
+:global(.ms-Fabric--isFocusVisible) .personaContainer:focus:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  pointer-events: none;
+  border: 1px solid;
+}
+.personaContainer :global(.ms-Persona-primaryText) {
+  color: '[theme:themeDark, default: #005a9e]';
+  font-size: 14px;
+  font-weight: 400;
+}
+.personaContainer :global(.ms-Persona-primaryText).hover {
+  color: '[theme:themeDark, default: #005a9e]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .personaContainer :global(.ms-Persona-primaryText) {
+    color: HighlightText;
+  }
+}
+.personaContainer .actionButton:hover {
+  background: '[theme:themeLight, default: #c7e0f4]';
+}
+.personaContainer .actionButton :global(.ms-Button-icon) {
+  color: '[theme:themeDark, default: #005a9e]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .personaContainer .actionButton :global(.ms-Button-icon) {
+    color: HighlightText;
+  }
+}
+.personaContainer:hover {
+  background: '[theme:themeLighter, default: #deecf9]';
+}
+.personaContainer:hover :global(.ms-Persona-primaryText) {
+  color: '[theme:themeDark, default: #005a9e]';
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (-ms-high-contrast: active) {
+  .personaContainer:hover :global(.ms-Persona-primaryText) {
+    color: HighlightText;
+  }
+}
+.personaContainer.personaContainerIsSelected {
+  background: '[theme:themePrimary, default: #0078d4]';
+}
+.personaContainer.personaContainerIsSelected :global(.ms-Persona-primaryText) {
+  color: '[theme:white, default: #ffffff]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .personaContainer.personaContainerIsSelected :global(.ms-Persona-primaryText) {
+    color: HighlightText;
+  }
+}
+.personaContainer.personaContainerIsSelected .actionButton {
+  color: '[theme:white, default: #ffffff]';
+}
+.personaContainer.personaContainerIsSelected .actionButton :global(.ms-Button-icon) {
+  color: '[theme:themeDark, default: #005a9e]';
+}
+.personaContainer.personaContainerIsSelected .actionButton :global(.ms-Button-icon):hover {
+  background: '[theme:themeDark, default: #005a9e]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .personaContainer.personaContainerIsSelected .actionButton :global(.ms-Button-icon) {
+    color: HighlightText;
+  }
+}
+@media screen and (-ms-high-contrast: active) {
+  .personaContainer.personaContainerIsSelected {
+    border-color: Highlight;
+    background: Highlight;
+    -ms-high-contrast-adjust: none;
+  }
+}
+.personaContainer.validationError :global(.ms-Persona-primaryText) {
+  color: '[theme:red, default: #e81123]';
+}
+.personaContainer.validationError :global(.ms-Persona-initials) {
+  font-size: 20px;
+}
+@media screen and (-ms-high-contrast: active) {
+  .personaContainer {
+    border: 1px solid WindowText;
+  }
+}
+.personaContainer .itemContent {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+.personaContainer .removeButton {
+  border-radius: 15px;
+  flex: 0 0 auto;
+  width: 33px;
+  height: 33px;
+  flex-basis: 32px;
+}
+.personaContainer .expandButton {
+  border-radius: 15px 0 0 15px;
+  height: 33px;
+  width: 44px;
+  padding-right: 16px;
+  position: inherit;
+  display: flex;
+  margin-right: -17px;
+}
+.personaContainer .personaWrapper {
+  position: relative;
+  display: inherit;
+}
+.personaContainer .personaWrapper :global(.ms-Persona-details) {
+  padding: 0 8px;
+}
+.personaContainer .personaDetails {
+  flex: 0 1 auto;
+}
+.itemContainer {
+  display: inline-block;
+  vertical-align: top;
+}

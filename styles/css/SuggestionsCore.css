@@ -1,0 +1,16 @@
+.suggestionsContainer {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 300px;
+}
+.suggestionsContainer :global(.ms-Suggestion-item):hover {
+  background-color: '[theme:neutralLighter, default: #f3f2f1]';
+  cursor: pointer;
+}
+.suggestionsContainer :global(.is-suggested) {
+  background-color: '[theme:themeLighter, default: #deecf9]';
+}
+.suggestionsContainer :global(.is-suggested):hover {
+  background-color: '[theme:themeLight, default: #c7e0f4]';
+  cursor: pointer;
+}

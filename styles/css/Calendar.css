@@ -1,0 +1,903 @@
+.root {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.root ::-moz-focus-inner {
+  border: 0;
+}
+.root * {
+  outline: transparent;
+  position: relative;
+}
+:global(.ms-Fabric--isFocusVisible) .root :focus:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  border: 1px solid;
+}
+.picker {
+  color: '[theme:black, default: #000000]';
+  font-size: 14px;
+  position: relative;
+}
+html[dir='ltr'] .picker {
+  text-align: left;
+}
+html[dir='rtl'] .picker {
+  text-align: right;
+}
+.holder {
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  display: none;
+}
+.picker.pickerIsOpened .holder {
+  box-sizing: border-box;
+  display: inline-block;
+}
+.frame,
+.pickerIsOpened {
+  position: relative;
+}
+.wrap {
+  min-height: 212px;
+  padding: 12px;
+  display: flex;
+  box-sizing: content-box;
+}
+.wrap.goTodaySpacing {
+  min-height: 228px;
+}
+.dayPicker {
+  display: block;
+}
+.header {
+  position: relative;
+  display: inline-flex;
+  height: 28px;
+  line-height: 44px;
+  width: 100%;
+}
+.divider {
+  top: 0;
+  margin-top: -12px;
+  margin-bottom: -12px;
+}
+html[dir='ltr'] .divider {
+  border-right: 1px solid;
+}
+html[dir='rtl'] .divider {
+  border-left: 1px solid;
+}
+.decade,
+.monthAndYear,
+.year {
+  display: inline-flex;
+  flex-grow: 1;
+  font-size: 14px;
+  font-weight: 400;
+  color: '[theme:neutralPrimary, default: #323130]';
+  font-weight: 600;
+  padding: 0 5px;
+}
+.currentDecade:hover,
+.currentYear:hover,
+.monthAndYear:hover {
+  cursor: default;
+}
+.table {
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: inherit;
+  margin-top: 4px;
+  width: 197px;
+}
+.table td {
+  margin: 0;
+  padding: 0;
+}
+.dayWrapper,
+.weekday {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  line-height: 28px;
+  font-size: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  color: '[theme:neutralPrimary, default: #323130]';
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+.dayWrapper ::-moz-focus-inner,
+.weekday ::-moz-focus-inner {
+  border: 0;
+}
+.dayWrapper *,
+.weekday * {
+  outline: transparent;
+  position: relative;
+}
+:global(.ms-Fabric--isFocusVisible) .dayWrapper :focus:after,
+:global(.ms-Fabric--isFocusVisible) .weekday :focus:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  pointer-events: none;
+  border: 1px solid;
+}
+.day {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  line-height: 100%;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+@media screen and (-ms-high-contrast: active) {
+  .daySelection .day:active,
+  .daySelection .day:hover {
+    outline: 1px solid highlight;
+  }
+}
+@media screen and (-ms-high-contrast: active) {
+  .daySelection .day:active {
+    color: highlight;
+  }
+}
+.dayIsToday,
+.dayIsToday:hover {
+  position: relative;
+  background-color: '[theme:themeLight, default: #c7e0f4]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .dayIsToday,
+  .dayIsToday:hover {
+    background-color: highlight;
+    border-radius: 2px;
+  }
+}
+@media screen and (-ms-high-contrast: active) {
+  .dayIsToday:hover span,
+  .dayIsToday span {
+    -ms-high-contrast-adjust: none;
+    color: window;
+  }
+}
+.dayIsToday:hover,
+.dayIsToday:hover:hover {
+  border-radius: 0;
+}
+.dayIsDisabled:before {
+  border-top-color: '[theme:neutralTertiary, default: #a19f9d]';
+}
+.dayIsUnfocused {
+  color: '[theme:neutralSecondary, default: #605e5c]';
+  font-weight: 400;
+}
+.dayIsFocused:hover,
+.dayIsUnfocused:hover {
+  cursor: pointer;
+  background: '[theme:neutralLight, default: #edebe9]';
+  color: '[theme:neutralDark, default: #201f1e]';
+}
+.daySelection.dayIsHighlighted:hover,
+.pickerIsFocused .dayIsHighlighted.daySelection {
+  cursor: pointer;
+}
+@media screen and (-ms-high-contrast: active) {
+  .daySelection.dayIsHighlighted:hover,
+  .pickerIsFocused .dayIsHighlighted.daySelection {
+    border: 2px solid Highlight;
+  }
+  .daySelection.dayIsHighlighted:hover :not(.dayIsToday) span,
+  .pickerIsFocused .dayIsHighlighted.daySelection :not(.dayIsToday) span {
+    color: Highlight;
+  }
+}
+@media screen and (-ms-high-contrast: active) {
+  .dayIsHighlighted button.dayIsToday {
+    border-radius: 0;
+  }
+}
+@media screen and (-ms-high-contrast: active) {
+  .dayIsHighlighted button.dayIsToday span {
+    color: Window;
+  }
+}
+.dayIsFocused:active,
+.dayIsHighlighted {
+  background: '[theme:themeLight, default: #c7e0f4]';
+}
+.dayIsFocused:active.day,
+.dayIsHighlighted.day {
+  color: '[theme:neutralPrimary, default: #323130]';
+  font-weight: 600;
+}
+.dayIsHighlighted.dayDisabled,
+.dayIsHighlighted.dayDisabled:hover {
+  background: '[theme:neutralTertiary, default: #a19f9d]';
+}
+.dayBackground,
+.dayBackground:active,
+.dayBackground:hover {
+  border-radius: 2px;
+}
+.dayHover,
+.dayHover:hover {
+  cursor: pointer;
+  background: '[theme:neutralLight, default: #edebe9]';
+  color: '[theme:neutralDark, default: #201f1e]';
+}
+.dayPress,
+.dayPress:hover {
+  cursor: pointer;
+  font-weight: 600;
+  background: '[theme:themeLight, default: #c7e0f4]';
+  color: '[theme:neutralPrimary, default: #323130]';
+}
+.dayPress .dayIsToday,
+.dayPress:hover .dayIsToday {
+  background: '[theme:themePrimary, default: #0078d4]';
+}
+.dayIsFocused:active,
+.dayIsHighlighted,
+.dayIsHighlighted:active,
+.dayIsHighlighted:hover,
+.dayIsUnfocused:active,
+.weekBackground,
+.weekBackground:active,
+.weekBackground:hover {
+  background: '[theme:themeLight, default: #c7e0f4]';
+  color: '[theme:neutralPrimary, default: #323130]';
+  font-weight: 600;
+}
+.dayIsToday,
+.dayIsToday.day:active,
+.pickerIsFocused .dayIsToday {
+  position: relative;
+  color: '[theme:white, default: #ffffff]';
+  font-weight: 600;
+  background: '[theme:themePrimary, default: #0078d4]';
+}
+.showWeekNumbers .weekNumbers {
+  border-right: 1px solid;
+  box-sizing: border-box;
+  width: 28px;
+  padding: 0;
+}
+.showWeekNumbers .weekNumbers .dayWrapper {
+  color: '[theme:neutralSecondary, default: #605e5c]';
+}
+.showWeekNumbers .weekNumbers .dayWrapper.weekIsHighlighted {
+  color: '[theme:neutralPrimary, default: #323130]';
+}
+.showWeekNumbers .table {
+  width: 225px;
+}
+.showWeekNumbers .table .dayWrapper,
+.showWeekNumbers .table .weekday {
+  width: 30px;
+}
+.showWeekNumbersRTL .weekNumbers {
+  border-left: 1px solid;
+  box-sizing: border-box;
+}
+.showWeekNumbersRTL .weekNumbers .dayWrapper {
+  color: '[theme:neutralSecondary, default: #605e5c]';
+}
+.showWeekNumbersRTL .weekNumbers .dayWrapper.weekIsHighlighted {
+  color: '[theme:neutralPrimary, default: #323130]';
+}
+.showWeekNumbersRTL .table {
+  width: 225px;
+}
+.showWeekNumbersRTL .table .dayWrapper,
+.showWeekNumbersRTL .table .weekday {
+  width: 30px;
+}
+.decadeComponents,
+.monthComponents,
+.yearComponents {
+  display: inline-flex;
+  align-self: flex-end;
+}
+.closeButton,
+.nextDecade,
+.nextMonth,
+.nextYear,
+.prevDecade,
+.prevMonth,
+.prevYear {
+  width: 28px;
+  height: 28px;
+  display: block;
+  line-height: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: '[theme:neutralPrimary, default: #323130]';
+  border-radius: 2px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.closeButton:hover,
+.nextDecade:hover,
+.nextMonth:hover,
+.nextYear:hover,
+.prevDecade:hover,
+.prevMonth:hover,
+.prevYear:hover {
+  cursor: pointer;
+  outline: 1px solid transparent;
+}
+.nextDecadeIsDisabled,
+.nextMonthIsDisabled,
+.nextYearIsDisabled,
+.prevDecadeIsDisabled,
+.prevMonthIsDisabled,
+.prevYearIsDisabled {
+  color: '[theme:neutralTertiaryAlt, default: #c8c6c4]';
+  pointer-events: none;
+}
+.headerToggleView {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+.headerToggleView:hover {
+  color: '[theme:black, default: #000000]';
+  cursor: pointer;
+}
+@media screen and (-ms-high-contrast: active) {
+  .headerToggleView:hover {
+    outline: 1px solid highlight;
+  }
+}
+@media screen and (-ms-high-contrast: active) {
+  .headerToggleView:hover:active {
+    color: highlight;
+  }
+}
+.currentDecade,
+.currentYear {
+  display: inline-flex;
+  flex-grow: 1;
+  padding: 0 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: '[theme:neutralPrimary, default: #323130]';
+  height: 28px;
+  line-height: 28px;
+  font-weight: 600;
+}
+html[dir='ltr'] .currentDecade,
+html[dir='ltr'] .currentYear {
+  margin-left: 5px;
+}
+html[dir='rtl'] .currentDecade,
+html[dir='rtl'] .currentYear {
+  margin-right: 5px;
+}
+.optionGrid {
+  position: relative;
+  height: 210px;
+  width: 196px;
+}
+.optionGrid,
+html[dir='rtl'] .optionGrid {
+  margin: 4px 0 0;
+}
+.monthOption,
+.yearOption {
+  width: 60px;
+  height: 60px;
+  line-height: 100%;
+  cursor: pointer;
+  margin: 0 10px 10px 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: '[theme:neutralPrimary, default: #323130]';
+  text-align: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 2px;
+}
+html[dir='ltr'] .monthOption,
+html[dir='ltr'] .yearOption {
+  float: left;
+}
+html[dir='rtl'] .monthOption,
+html[dir='rtl'] .yearOption {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+.monthOption:hover,
+.yearOption:hover {
+  color: '[theme:neutralDark, default: #201f1e]';
+  background-color: '[theme:neutralLight, default: #edebe9]';
+  outline: 1px solid transparent;
+}
+@media screen and (-ms-high-contrast: active) {
+  .monthOption:hover,
+  .yearOption:hover {
+    outline-color: highlight;
+  }
+}
+@media screen and (-ms-high-contrast: active) {
+  .monthOption:active,
+  .yearOption:active {
+    color: highlight;
+  }
+}
+.monthOption.isHighlighted,
+.yearOption.isHighlighted {
+  background-color: '[theme:neutralPrimary, default: #323130]';
+  color: '[theme:white, default: #ffffff]';
+}
+.dayIsDisabled,
+.monthOptionIsDisabled,
+.yearOptionIsDisabled {
+  color: '[theme:neutralTertiaryAlt, default: #c8c6c4]';
+  pointer-events: none;
+}
+.goToday {
+  bottom: 0;
+  color: '[theme:themePrimary, default: #0078d4]';
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  color: '[theme:neutralPrimary, default: #323130]';
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  background-color: transparent;
+  border: none;
+  position: absolute !important;
+  box-sizing: content-box;
+}
+[dir='ltr'] .goToday {
+  right: 13px;
+}
+[dir='rtl'] .goToday {
+  left: 13px;
+}
+.goToday:hover {
+  color: '[theme:themePrimary, default: #0078d4]';
+  outline: 1px solid transparent;
+}
+@media screen and (-ms-high-contrast: active) {
+  .goToday:hover {
+    outline-color: highlight;
+  }
+}
+.goToday:active {
+  color: '[theme:themeDark, default: #005a9e]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .goToday:active {
+    color: highlight;
+  }
+}
+.goToTodayIsDisabled {
+  color: '[theme:neutralTertiaryAlt, default: #c8c6c4]';
+  pointer-events: none;
+}
+.goTodayInlineMonth {
+  top: 212px;
+}
+.wrap.goTodaySpacing {
+  padding-bottom: 28px;
+}
+.root.isPickingYears .dayPicker,
+.root.isPickingYears .monthComponents,
+.root.isPickingYears .monthPicker {
+  display: none;
+}
+.root.isPickingYears .yearPicker {
+  display: block;
+}
+@media (min-device-width: 460px) {
+  .wrap {
+    padding: 12px;
+  }
+  .dayPicker,
+  .monthPicker {
+    min-height: 200px;
+  }
+  .header {
+    height: 28px;
+    line-height: 28px;
+    width: 100%;
+  }
+  .closeButton,
+  .dayWrapper,
+  .nextDecade,
+  .nextMonth,
+  .nextYear,
+  .prevDecade,
+  .prevMonth,
+  .prevYear,
+  .weekday {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+  }
+  .holder {
+    display: inline-block;
+    height: auto;
+    overflow: hidden;
+  }
+  .decade,
+  .monthAndYear,
+  .year {
+    font-size: 14px;
+    color: '[theme:neutralPrimary, default: #323130]';
+  }
+  .yearComponents {
+    margin-left: 1px;
+  }
+  .goToday {
+    padding: 0 3px;
+  }
+  [dir='ltr'] .goToday {
+    right: 20px;
+  }
+  [dir='rtl'] .goToday {
+    left: 20px;
+  }
+  .showWeekNumbers .table .dayWrapper,
+  .showWeekNumbers .table .weekday,
+  .showWeekNumbersRTL .table .dayWrapper,
+  .showWeekNumbersRTL .table .weekday {
+    width: 28px;
+  }
+  .monthPickerVisible .wrap {
+    padding: 12px;
+  }
+  .monthPickerVisible .dayPicker {
+    margin: -10px 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    width: 212px;
+    min-height: 200px;
+  }
+  .monthPickerVisible .monthPicker {
+    display: block;
+  }
+  .monthPickerVisible .optionGrid {
+    height: 150px;
+    width: 196px;
+  }
+  .monthPickerVisible .toggleMonthView {
+    display: none;
+  }
+  .monthPickerVisible .currentDecade,
+  .monthPickerVisible .currentYear {
+    font-size: 14px;
+    margin: 0;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+  }
+  .monthPickerVisible .monthOption,
+  .monthPickerVisible .yearOption {
+    width: 40px;
+    height: 40px;
+    line-height: 100%;
+    font-size: 12px;
+    margin: 0 12px 16px 0;
+  }
+  html[dir='rtl'] .monthPickerVisible .monthOption,
+  html[dir='rtl'] .monthPickerVisible .yearOption {
+    margin: 0 0 16px 12px;
+  }
+  .monthPickerVisible .monthOption:hover,
+  .monthPickerVisible .yearOption:hover {
+    outline: 1px solid transparent;
+  }
+  .monthPickerVisible .monthOption:nth-child(4n + 4),
+  .monthPickerVisible .yearOption:nth-child(4n + 4),
+  html[dir='rtl'] .monthPickerVisible .monthOption:nth-child(4n + 4),
+  html[dir='rtl'] .monthPickerVisible .yearOption:nth-child(4n + 4) {
+    margin: 0 0 16px;
+  }
+  .monthPickerVisible .goToday {
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+  }
+  [dir='ltr'] .monthPickerVisible .goToday {
+    right: 8px;
+  }
+  [dir='rtl'] .monthPickerVisible .goToday {
+    left: 8px;
+  }
+  html[dir='ltr'] .monthPickerVisible .goToday {
+    text-align: right;
+  }
+  html[dir='rtl'] .monthPickerVisible .goToday {
+    text-align: left;
+  }
+  .monthPickerVisible .root.isPickingYears .dayPicker,
+  .monthPickerVisible .root.isPickingYears .monthComponents {
+    display: block;
+  }
+  .monthPickerVisible .root.isPickingYears .monthPicker {
+    display: none;
+  }
+  .monthPickerVisible .root.isPickingYears .yearPicker {
+    display: block;
+  }
+  .calendarsInline .wrap {
+    padding: 12px;
+  }
+  .calendarsInline .holder {
+    height: auto;
+  }
+  html[dir='ltr'] .calendarsInline .table {
+    margin-right: 12px;
+  }
+  html[dir='rtl'] .calendarsInline .table {
+    margin-left: 12px;
+  }
+  .calendarsInline .dayPicker {
+    width: auto;
+  }
+  html[dir='ltr'] .calendarsInline .monthPicker {
+    margin-left: 12px;
+  }
+  html[dir='rtl'] .calendarsInline .monthPicker {
+    margin-right: 12px;
+  }
+  html[dir='ltr'] .calendarsInline .yearPicker {
+    margin-left: 12px;
+  }
+  html[dir='rtl'] .calendarsInline .yearPicker {
+    margin-right: 12px;
+  }
+  .calendarsInline .goToday {
+    padding: 0 10px;
+  }
+  [dir='ltr'] .calendarsInline .goToday {
+    right: 14px;
+  }
+  [dir='rtl'] .calendarsInline .goToday {
+    left: 14px;
+  }
+  html[dir='ltr'] .calendarsInline .monthComponents {
+    margin-right: 12px;
+  }
+  html[dir='rtl'] .calendarsInline .monthComponents {
+    margin-left: 12px;
+  }
+  .monthPickerOnly .wrap {
+    padding: 12px;
+  }
+  .monthPickerAsOverlay .wrap {
+    padding-bottom: 28px;
+    margin-bottom: 6px;
+  }
+  .monthPickerAsOverlay .holder {
+    height: 240px;
+    min-height: 240px;
+  }
+  .monthPickerAsOverlay .holderWithButton {
+    padding-top: 6px;
+    height: auto;
+  }
+}
+@media (max-device-width: 459px) {
+  .calendarsInline .monthPicker,
+  .calendarsInline .yearPicker {
+    display: none;
+  }
+  .yearComponents {
+    margin-top: 2px;
+  }
+}
+.goToday {
+  width: auto;
+}
+.closeButton,
+.nextDecade,
+.nextMonth,
+.nextYear,
+.prevDecade,
+.prevMonth,
+.prevYear {
+  display: inline-block;
+}
+.closeButton:hover,
+.nextDecade:hover,
+.nextMonth:hover,
+.nextYear:hover,
+.prevDecade:hover,
+.prevMonth:hover,
+.prevYear:hover {
+  background-color: '[theme:neutralLight, default: #edebe9]';
+  color: '[theme:neutralDark, default: #201f1e]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .closeButton:hover,
+  .nextDecade:hover,
+  .nextMonth:hover,
+  .nextYear:hover,
+  .prevDecade:hover,
+  .prevMonth:hover,
+  .prevYear:hover {
+    outline: 1px solid highlight;
+  }
+}
+.closeButton:active,
+.nextDecade:active,
+.nextMonth:active,
+.nextYear:active,
+.prevDecade:active,
+.prevMonth:active,
+.prevYear:active {
+  background-color: '[theme:themeLight, default: #c7e0f4]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .closeButton:active,
+  .nextDecade:active,
+  .nextMonth:active,
+  .nextYear:active,
+  .prevDecade:active,
+  .prevMonth:active,
+  .prevYear:active {
+    color: highlight;
+  }
+}
+.monthIsHighlighted {
+  font-weight: 600;
+  color: '[theme:neutralPrimary, default: #323130]';
+}
+.monthIsHighlighted,
+.monthIsHighlighted.monthOption:hover {
+  background-color: '[theme:themeLight, default: #c7e0f4]';
+}
+@media screen and (-ms-high-contrast: active) {
+  .monthIsHighlighted {
+    color: highlight;
+    border: 2px solid highlight;
+    border-radius: 2px;
+  }
+  .monthIsHighlighted:hover {
+    outline: 0 !important;
+  }
+}
+.monthIsCurrentMonth,
+.monthIsCurrentMonth.monthOption:hover {
+  font-weight: 600;
+  color: '[theme:white, default: #ffffff]';
+  background-color: '[theme:themePrimary, default: #0078d4]';
+}
+.monthOption:active {
+  color: '[theme:neutralDark, default: #201f1e]';
+}
+.monthOption:active,
+.yearIsHighlighted {
+  background-color: '[theme:themeLight, default: #c7e0f4]';
+}
+.yearIsHighlighted {
+  font-weight: 600;
+  color: '[theme:neutralPrimary, default: #323130]';
+}
+.yearIsHighlighted.yearOption:hover {
+  background-color: '[theme:themeLight, default: #c7e0f4]';
+}
+.yearIsCurrentYear,
+.yearIsCurrentYear.yearOption:hover {
+  font-weight: 600;
+  color: '[theme:white, default: #ffffff]';
+  background-color: '[theme:themePrimary, default: #0078d4]';
+}
+.yearOption:active {
+  background-color: '[theme:themeLight, default: #c7e0f4]';
+  color: '[theme:neutralDark, default: #201f1e]';
+}
+.topLeftCornerDate {
+  border-top-left-radius: 2px;
+}
+.topRightCornerDate {
+  border-top-right-radius: 2px;
+}
+.bottomLeftCornerDate {
+  border-bottom-left-radius: 2px;
+}
+.bottomRightCornerDate {
+  border-bottom-right-radius: 2px;
+}
+@media screen and (-ms-high-contrast: active) {
+  .weekBackground {
+    border-top: 1px solid highlight;
+    border-bottom: 1px solid highlight;
+  }
+  .weekBackground.bottomRightCornerDate.topRightCornerDate {
+    border-right: 1px solid highlight;
+    border-left: none;
+    padding-left: 1px;
+  }
+  .weekBackground.bottomLeftCornerDate.topLeftCornerDate {
+    border-left: 1px solid highlight;
+    border-right: none;
+    padding-right: 1px;
+  }
+  .weekBackground :not(.dayIsToday) span {
+    color: highlight;
+  }
+  .weekSelection.dayHover {
+    border-top: 1px solid highlight;
+    border-bottom: 1px solid highlight;
+  }
+  .weekSelection.dayHover.bottomLeftCornerDate.topLeftCornerDate {
+    border-left: 1px solid highlight;
+    padding-right: 1px;
+  }
+  .weekSelection.dayHover.bottomRightCornerDate.topRightCornerDate {
+    border-right: 1px solid highlight;
+    padding-left: 1px;
+  }
+  .weekSelection.dayHover.dayPress :not(.dayIsToday) span {
+    color: highlight;
+  }
+  .monthSelection.dayHover.bottomLeftCornerDate,
+  .monthSelection.dayHover.topLeftCornerDate {
+    border-left: 1px solid highlight;
+    padding-right: 1px;
+  }
+  .monthSelection.dayHover.bottomRightCornerDate,
+  .monthSelection.dayHover.topRightCornerDate {
+    border-right: 1px solid highlight;
+    padding-left: 1px;
+  }
+  .monthSelection.dayIsFocused.dayHover.topDate,
+  .monthSelection.dayIsUnfocused.dayHover.topDate {
+    border-top: 1px solid highlight;
+    padding-bottom: 1px;
+  }
+  .monthSelection.dayIsFocused.dayHover.rightDate,
+  .monthSelection.dayIsUnfocused.dayHover.rightDate {
+    border-right: 1px solid highlight;
+    padding-left: 1px;
+  }
+  .monthSelection.dayIsFocused.dayHover.bottomDate,
+  .monthSelection.dayIsUnfocused.dayHover.bottomDate {
+    border-bottom: 1px solid highlight;
+    padding-top: 1px;
+  }
+  .monthSelection.dayIsFocused.dayHover.leftdate,
+  .monthSelection.dayIsUnfocused.dayHover.leftdate {
+    border-left: 1px solid highlight;
+    padding-right: 1px;
+  }
+  .monthSelection.dayIsFocused.dayHover.dayPress :not(.dayIsToday) span,
+  .monthSelection.dayIsUnfocused.dayHover.dayPress :not(.dayIsToday) span {
+    color: highlight;
+  }
+}

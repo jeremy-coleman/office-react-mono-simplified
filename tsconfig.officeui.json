@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "rootDir": "./src/office-ui-fabric-react/components",
+    "outDir": "lib",
+    "declaration": true,
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "disableSizeLimit": true,
+    "strictFunctionTypes":false,
+    "moduleResolution": "node",
+    "preserveConstEnums": true,
+    "lib": ["es2018", "dom"],
+    "skipLibCheck": true,
+  },
+  "include": ["./src/office-ui-fabric-react/components"],
+  "exclude": ["node_modules"]
+}

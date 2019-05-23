@@ -1,0 +1,84 @@
+{
+  "type": "Rule",
+  "loc": null,
+  "prelude": {
+    "type": "SelectorList",
+    "loc": null,
+    "children": [
+      {
+        "type": "Selector",
+        "loc": null,
+        "children": [
+          {
+            "type": "ClassSelector",
+            "loc": null,
+            "name": "suggestionsContainer"
+          },
+          {
+            "type": "WhiteSpace",
+            "loc": null,
+            "value": " "
+          },
+          {
+            "type": "PseudoClassSelector",
+            "loc": null,
+            "name": "global",
+            "children": [
+              {
+                "type": "Raw",
+                "loc": null,
+                "value": ".is-suggested"
+              }
+            ]
+          },
+          {
+            "type": "PseudoClassSelector",
+            "loc": null,
+            "name": "hover",
+            "children": null
+          }
+        ]
+      }
+    ]
+  },
+  "block": {
+    "type": "Block",
+    "loc": null,
+    "children": [
+      {
+        "type": "Declaration",
+        "loc": null,
+        "important": false,
+        "property": "background-color",
+        "value": {
+          "type": "Value",
+          "loc": null,
+          "children": [
+            {
+              "type": "String",
+              "loc": null,
+              "value": "'[theme:themeLight, default: #c7e0f4]'"
+            }
+          ]
+        }
+      },
+      {
+        "type": "Declaration",
+        "loc": null,
+        "important": false,
+        "property": "cursor",
+        "value": {
+          "type": "Value",
+          "loc": null,
+          "children": [
+            {
+              "type": "Identifier",
+              "loc": null,
+              "name": "pointer"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

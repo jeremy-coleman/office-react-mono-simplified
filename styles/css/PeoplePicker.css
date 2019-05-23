@@ -1,0 +1,23 @@
+.resultContent {
+  display: table-row;
+}
+.resultContent .resultItem {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.peoplePickerPersona {
+  width: 180px;
+}
+.peoplePickerPersona :global(.ms-Persona-details) {
+  width: 100%;
+}
+.peoplePicker :global(.ms-BasePicker-text) {
+  min-height: 40px;
+}
+.peoplePickerPersonaContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 12px;
+}
