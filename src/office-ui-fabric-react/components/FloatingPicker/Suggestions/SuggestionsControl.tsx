@@ -10,10 +10,10 @@ import {
 } from './Suggestions.types';
 import { SuggestionsCore } from './SuggestionsCore';
 
-//@ts-ignore
-import * as stylesImport from './SuggestionsControl.scss';
-// tslint:disable-next-line:no-any
-const styles: any = stylesImport;
+
+import * as styles from './SuggestionsControlStyle';
+import * as stylesCore from './SuggestionsCoreStyle';
+
 
 export enum SuggestionItemType {
   header,
@@ -202,7 +202,7 @@ export class SuggestionsControl<T> extends BaseComponent<ISuggestionsControlProp
 
     return headerItemsProps ? (
       <div
-        className={css('ms-Suggestions-headerContainer', styles.suggestionsContainer)}
+        className={css('ms-Suggestions-headerContainer', stylesCore.suggestionsContainer)}
         id="suggestionHeader-list"
         role="list"
         aria-label={suggestionsHeaderContainerAriaLabel}
@@ -236,7 +236,7 @@ export class SuggestionsControl<T> extends BaseComponent<ISuggestionsControlProp
     const { selectedFooterIndex } = this.state;
     return footerItemsProps ? (
       <div
-        className={css('ms-Suggestions-footerContainer', styles.suggestionsContainer)}
+        className={css('ms-Suggestions-footerContainer', stylesCore.suggestionsContainer)}
         id="suggestionFooter-list"
         role="list"
         aria-label={suggestionsFooterContainerAriaLabel}

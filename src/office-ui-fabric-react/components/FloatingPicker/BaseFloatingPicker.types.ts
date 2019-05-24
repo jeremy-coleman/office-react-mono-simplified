@@ -4,6 +4,7 @@ import { ISuggestionsControlProps } from './Suggestions/Suggestions.types';
 import { SuggestionsStore } from './Suggestions/SuggestionsStore';
 import { IRefObject } from '@uifabric/utilities';
 import { ISuggestionItemProps } from '../Pickers/Suggestions/SuggestionsItem.types';
+import { ISuggestionModel } from '../Pickers/Suggestions/Suggestions.types';
 
 export interface IBaseFloatingPicker {
   /** Whether the suggestions are shown */

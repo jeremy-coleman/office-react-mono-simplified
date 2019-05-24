@@ -5,7 +5,7 @@ import { IProcessedStyleSet } from '@uifabric/styling';
 import { SelectionMode } from '@uifabric/utilities/selection/interfaces';
 import { DetailsList } from './DetailsList';
 import { IDetailsRowProps } from './DetailsRow.types';
-import { Shimmer, ShimmerElementsGroup, ShimmerElementType, IShimmerElement } from '../../Shimmer';
+import { Shimmer, ShimmerElementsGroup, ShimmerElementType, IShimmerElement } from '../Shimmer';
 import { IShimmeredDetailsListProps, IShimmeredDetailsListStyleProps, IShimmeredDetailsListStyles } from './ShimmeredDetailsList.types';
 import { CheckboxVisibility } from './DetailsList.types';
 

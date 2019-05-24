@@ -4,10 +4,9 @@ import { Persona, PersonaSize, PersonaPresence } from '../../../Persona';
 import { IPeoplePickerItemProps } from '../../../ExtendedPicker';
 import { IconButton } from '../../../Button';
 
-//@ts-ignore
-import * as stylesImport from './PickerItemsDefault.scss';
-// tslint:disable-next-line:no-any
-const styles: any = stylesImport;
+
+import * as styles from './PickerItemsDefaultStyle';
+
 
 export const SelectedItemDefault: (props: IPeoplePickerItemProps) => JSX.Element = (peoplePickerItemProps: IPeoplePickerItemProps) => {
   const { item, onRemoveItem, index, selected, removeButtonAriaLabel } = peoplePickerItemProps;
@@ -26,8 +25,8 @@ export const SelectedItemDefault: (props: IPeoplePickerItemProps) => JSX.Element
       className={css(
         'ms-PickerPersona-container',
         styles.personaContainer,
-        { ['is-selected ' + styles.personaContainerIsSelected]: selected },
-        { ['is-invalid ' + styles.validationError]: !item.isValid }
+        { ['is-selected ' + styles.personaContainerPersonaContainerIsSelected]: selected },
+        { ['is-invalid ' + styles.personaContainerValidationError]: !item.isValid }
       )}
       data-is-focusable={true}
       data-is-sub-focuszone={true}
@@ -35,13 +34,13 @@ export const SelectedItemDefault: (props: IPeoplePickerItemProps) => JSX.Element
       role={'listitem'}
       aria-labelledby={'selectedItemPersona-' + itemId}
     >
-      <div className={css('ms-PickerItem-content', styles.itemContent)} id={'selectedItemPersona-' + itemId}>
+      <div className={css('ms-PickerItem-content', styles.personaContainerItemContent)} id={'selectedItemPersona-' + itemId}>
         <Persona {...item} presence={item.presence !== undefined ? item.presence : PersonaPresence.none} size={PersonaSize.size28} />
       </div>
       <IconButton
         onClick={onClickIconButton(onRemoveItem)}
         iconProps={{ iconName: 'Cancel', style: { fontSize: '12px' } }}
-        className={css('ms-PickerItem-removeButton', styles.removeButton)}
+        className={css('ms-PickerItem-removeButton', styles.personaContainerRemoveButton)}
         ariaLabel={removeButtonAriaLabel}
       />
     </div>

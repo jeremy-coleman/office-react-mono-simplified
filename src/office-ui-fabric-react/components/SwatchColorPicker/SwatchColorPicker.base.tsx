@@ -9,7 +9,7 @@ import {
   warnConditionallyRequiredProps
 } from '@uifabric/utilities';
 import { ISwatchColorPickerProps, ISwatchColorPickerStyleProps, ISwatchColorPickerStyles } from './SwatchColorPicker.types';
-import { Grid } from '@uifabric/utilities/grid/Grid';
+import { Grid } from '../Grid';
 import { IColorCellProps } from './ColorPickerGridCell.types';
 import { ColorPickerGridCell } from './ColorPickerGridCell';
 

@@ -5,8 +5,8 @@ import { IProcessedStyleSet } from '@uifabric/styling';
 import { CommandButton, IconButton } from '../../Button';
 import { ISuggestionItemProps, ISuggestionsItemStyleProps, ISuggestionsItemStyles } from './SuggestionsItem.types';
 
-import * as stylesImport from './Suggestions.scss';
-const legacyStyles: any = stylesImport;
+import * as legacyStyles from './SuggestionsStyle';
+
 
 const getClassNames = classNamesFunction<ISuggestionsItemStyleProps, ISuggestionsItemStyles>();
 
@@ -49,12 +49,12 @@ export class SuggestionsItem<T> extends BaseComponent<ISuggestionItemProps<T>, {
             'ms-Suggestions-item',
             legacyStyles.suggestionsItem,
             {
-              ['is-suggested ' + legacyStyles.suggestionsItemIsSuggested]: suggestionModel.selected || isSelectedOverride
+              ['is-suggested ' + legacyStyles.suggestionsItemSuggestionsItemIsSuggested]: suggestionModel.selected || isSelectedOverride
             },
             className
           ),
-          itemButton: css('ms-Suggestions-itemButton', legacyStyles.itemButton),
-          closeButton: css('ms-Suggestions-closeButton', legacyStyles.closeButton)
+          itemButton: css('ms-Suggestions-itemButton', legacyStyles.itemButtonItemButton),
+          closeButton: css('ms-Suggestions-closeButton', legacyStyles.closeButtonCloseButton)
         };
 
     return (

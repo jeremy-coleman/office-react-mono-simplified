@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BaseComponent, classNamesFunction, divProperties, getNativeProps, IRenderFunction } from '@uifabric/utilities';
-import { TooltipHost, TooltipOverflowMode, DirectionalHint } from '../Tooltip';
-
+import { TooltipHost, TooltipOverflowMode } from '../Tooltip';
+import {DirectionalHint} from '@uifabric/utilities'
 import { PersonaCoin } from './PersonaCoin/PersonaCoin';
 import {
   IPersonaProps,

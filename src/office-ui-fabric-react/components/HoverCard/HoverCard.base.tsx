@@ -1,11 +1,10 @@
+import { BaseComponent, classNamesFunction, createRef, divProperties, getDocument, getId, getNativeProps, KeyCodes } from '@uifabric/utilities';
 import * as React from 'react';
-
-import { BaseComponent, divProperties, getNativeProps, getId, KeyCodes, getDocument, createRef, classNamesFunction } from '@uifabric/utilities';
-import { IHoverCardProps, IHoverCardStyles, IHoverCardStyleProps, OpenCardMode, HoverCardType, IHoverCard } from './HoverCard.types';
 import { ExpandingCard } from './ExpandingCard';
 import { ExpandingCardMode, IExpandingCardProps } from './ExpandingCard.types';
-import { PlainCard } from './PlainCard/PlainCard';
-import { IPlainCardProps } from './PlainCard/PlainCard.types';
+import { HoverCardType, IHoverCard, IHoverCardProps, IHoverCardStyleProps, IHoverCardStyles, OpenCardMode } from './HoverCard.types';
+import { IPlainCardProps, PlainCard } from './PlainCard';
+
 
 const getClassNames = classNamesFunction<IHoverCardStyleProps, IHoverCardStyles>();
 
@@ -162,6 +161,7 @@ export class HoverCardBase extends BaseComponent<IHoverCardProps, IHoverCardStat
   }
 
   private _shouldBlockHoverCard(): boolean {
+    //@ts-ignore
     return !!(this.props.shouldBlockHoverCard && this.props.shouldBlockHoverCard());
   }
 

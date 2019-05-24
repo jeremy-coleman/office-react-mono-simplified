@@ -1,27 +1,18 @@
+import { BaseComponent, classNamesFunction, css, getId, getRTL, IClassNames, IRenderFunction, KeyCodes } from '@uifabric/utilities';
+import { DragDropHelper, IDragDropOptions } from '@uifabric/utilities/dragdrop/index';
+import { ISelection, SelectionMode, SELECTION_CHANGE } from '@uifabric/utilities/selection/interfaces';
 import * as React from 'react';
 import { findDOMNode } from 'react-dom';
-import { BaseComponent, css, getRTL, getId, KeyCodes, IRenderFunction, IClassNames } from '@uifabric/utilities';
-import {
-  IColumn,
-  IDetailsHeaderBaseProps,
-  IColumnDragDropDetails,
-  ColumnDragEndLocation,
-  IColumnReorderOptions,
-  CheckboxVisibility
-} from './DetailsList.types';
-import { IFocusZone, FocusZone, FocusZoneDirection } from '../FocusZone';
+import { DetailsColumn, IDetailsColumnProps } from '../DetailsList/DetailsColumn';
+import { FocusZone, FocusZoneDirection, IFocusZone } from '../FocusZone';
+import { CollapseAllVisibility } from '../GroupedList';
+import { GroupSpacer } from '../GroupedList/GroupSpacer';
 import { Icon } from '../Icon';
 import { Layer } from '../Layer';
-import { GroupSpacer } from '../GroupedList/GroupSpacer';
-import { CollapseAllVisibility } from '../../GroupedList';
-import { DetailsRowCheck } from './DetailsRowCheck';
 import { ITooltipHostProps } from '../Tooltip';
-import { ISelection, SelectionMode, SELECTION_CHANGE } from '@uifabric/utilities/selection/interfaces';
-import { IDragDropOptions, DragDropHelper } from '@uifabric/utilities/dragdrop/index';
-import { DetailsColumn, IDetailsColumnProps } from '../DetailsList/DetailsColumn';
-import { SelectAllVisibility, IDropHintDetails, IColumnReorderHeaderProps, IDetailsHeaderState } from './DetailsHeader.types';
-import { IDetailsHeaderStyleProps, IDetailsHeaderStyles, IDetailsHeader } from './DetailsHeader.types';
-import { classNamesFunction } from '@uifabric/utilities';
+import { IColumnReorderHeaderProps, IDetailsHeader, IDetailsHeaderBaseProps, IDetailsHeaderState, IDetailsHeaderStyleProps, IDetailsHeaderStyles, IDropHintDetails, SelectAllVisibility } from './DetailsHeader.types';
+import { CheckboxVisibility, ColumnDragEndLocation, IColumn, IColumnDragDropDetails, IColumnReorderOptions } from './DetailsList.types';
+import { DetailsRowCheck } from './DetailsRowCheck';
 
 const getClassNames = classNamesFunction<IDetailsHeaderStyleProps, IDetailsHeaderStyles>();
 

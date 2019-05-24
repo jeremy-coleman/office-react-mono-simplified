@@ -6,8 +6,8 @@ import { ContextualMenu, DirectionalHint } from '../../../ContextualMenu';
 import { IconButton } from '../../../Button';
 import { FocusZone } from '../../../FocusZone';
 
-import * as stylesImport from './PickerItemsDefault.scss';
-const styles: any = stylesImport;
+import * as styles from './PickerItemsDefaultStyle';
+
 
 /** PeoplePickerItemWithMenu state interface. */
 export interface IPeoplePickerItemWithMenuState {
@@ -35,13 +35,13 @@ export class SelectedItemWithMenu extends BaseComponent<IPeoplePickerItemWithMen
     return (
       <div data-is-focusable={true} className={css('ms-PickerItem-container', styles.itemContainer)}>
         <FocusZone className={css('ms-PickerPersona-container', styles.personaContainer)}>
-          <div className={css('ms-PickerItem-content', styles.itemContent)}>
+          <div className={css('ms-PickerItem-content', styles.personaContainerItemContent)}>
             <Persona {...item as any} presence={item.presence !== undefined ? item.presence : PersonaPresence.none} />
           </div>
-          <div ref={this._ellipsisRef} className={css('ms-PickerItem-content', styles.itemContent)}>
+          <div ref={this._ellipsisRef} className={css('ms-PickerItem-content', styles.personaContainerItemContent)}>
             <IconButton iconProps={{ iconName: 'More' }} onClick={this._onContextualMenu} />
           </div>
-          <div className={css('ms-PickerItem-content', styles.itemContent)}>
+          <div className={css('ms-PickerItem-content', styles.personaContainerItemContent)}>
             <IconButton iconProps={{ iconName: 'Cancel' }} onClick={onRemoveItem} ariaLabel={removeButtonAriaLabel} />
           </div>
           {this.state.contextualMenuVisible ? (

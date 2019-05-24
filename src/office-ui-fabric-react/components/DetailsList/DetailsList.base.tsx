@@ -13,25 +13,26 @@ import {
   IDetailsListStyleProps,
   IDetailsGroupRenderProps,
   ColumnDragEndLocation
-} from '../DetailsList/DetailsList.types';
-import { DetailsHeader } from '../DetailsList/DetailsHeader';
-import { IDetailsHeader, SelectAllVisibility, IDetailsHeaderProps, IColumnReorderHeaderProps } from '../DetailsList/DetailsHeader.types';
-import { IDetailsFooterProps } from '../DetailsList/DetailsFooter.types';
-import { DetailsRowBase } from '../DetailsList/DetailsRow.base';
-import { DetailsRow } from '../DetailsList/DetailsRow';
-import { IDetailsRowProps } from '../DetailsList/DetailsRow.types';
+} from './DetailsList.types';
+import { DetailsHeader } from './DetailsHeader';
+import { IDetailsHeader, SelectAllVisibility, IDetailsHeaderProps, IColumnReorderHeaderProps } from './DetailsHeader.types';
+import { IDetailsFooterProps } from './DetailsFooter.types';
+import { DetailsRowBase } from './DetailsRow.base';
+import { DetailsRow } from './DetailsRow';
+import { IDetailsRowProps } from './DetailsRow.types';
 import { IFocusZone, FocusZone, FocusZoneDirection } from '../FocusZone';
-import { IObjectWithKey, ISelection, Selection, SelectionMode, SelectionZone } from '@uifabric/utilities/selection/index';
+import { IObjectWithKey, ISelection, Selection, SelectionMode } from '@uifabric/utilities/selection';
 
 import { DragDropHelper } from '@uifabric/utilities/dragdrop/DragDropHelper';
-import { IGroupedList, GroupedList, IGroupDividerProps, IGroupRenderProps } from '../../GroupedList';
+import { IGroupedList, GroupedList, IGroupDividerProps, IGroupRenderProps } from '../GroupedList';
 import { List, IListProps, ScrollToMode } from '../List';
-import { withViewport } from '@uifabric/utilities/decorators/withViewport';
-import { GetGroupCount } from '@uifabric/utilities/groupedList/GroupedListUtility';
+import { withViewport } from '@uifabric/utilities/decorators';
+import { GetGroupCount } from '../GroupedList';
 import { DEFAULT_CELL_STYLE_PROPS } from './DetailsRow.styles';
 import { CHECK_CELL_WIDTH as CHECKBOX_WIDTH } from './DetailsRowCheck.styles';
 // For every group level there is a GroupSpacer added. Importing this const to have the source value in one place.
 import { SPACER_WIDTH as GROUP_EXPAND_WIDTH } from '../GroupedList/GroupSpacer';
+import { SelectionZone } from '../Select';
 
 const getClassNames = classNamesFunction<IDetailsListStyleProps, IDetailsListStyles>();
 
@@ -875,7 +876,7 @@ export class DetailsListBase extends BaseComponent<IDetailsListProps, IDetailsLi
   }
 
   private _getColumnOverride(key: string): IColumn {
-    return (this._columnOverrides[key] = this._columnOverrides[key] || {});
+    return (this._columnOverrides[key] = this._columnOverrides[key] || {} as any);
   }
 
   /**

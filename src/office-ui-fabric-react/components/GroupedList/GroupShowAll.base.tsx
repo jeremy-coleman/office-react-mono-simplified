@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BaseComponent, classNamesFunction } from '@uifabric/utilities';
-import { Link } from '../../Link';
+import { Link } from '../Link';
 import { IGroupShowAllProps } from './GroupShowAll.types';
 import { IGroupShowAllStyleProps, IGroupShowAllStyles } from './GroupShowAll.types';
 import { GroupSpacer } from './GroupSpacer';

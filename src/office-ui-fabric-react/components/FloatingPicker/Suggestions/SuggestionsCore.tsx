@@ -3,10 +3,8 @@ import { BaseComponent, css, autobind } from '@uifabric/utilities';
 import { ISuggestionItemProps, SuggestionsItem, ISuggestionModel } from '../../Pickers';
 import { ISuggestionsCoreProps } from './Suggestions.types';
 
-//@ts-ignore
-import * as stylesImport from './SuggestionsCore.scss';
-// tslint:disable-next-line:no-any
-const styles: any = stylesImport;
+
+import * as styles from './SuggestionsCoreStyle';
 
 /**
  * Class when used with SuggestionsStore, renders a basic suggestions control

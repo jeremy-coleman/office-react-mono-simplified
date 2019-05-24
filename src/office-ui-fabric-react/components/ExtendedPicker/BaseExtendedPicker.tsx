@@ -1,15 +1,21 @@
 import * as React from 'react';
-import { BaseComponent, KeyCodes, css } from '@uifabric/utilities';
+import { BaseComponent, KeyCodes, css, SelectionMode, Selection } from '@uifabric/utilities';
 //import { Autofill } from '../Pickers/Autofill';
 //import { IInputProps } from '../Input';
-import * as stylesImport from './BaseExtendedPicker.scss';
+import * as styles from './BaseExtendedPickerStyle';
 import { IBaseExtendedPickerProps, IBaseExtendedPicker } from './BaseExtendedPicker.types';
+import { BaseSelectedItemsList, IBaseSelectedItemsListProps } from '../SelectedItemsList';
+import { IBaseFloatingPickerProps, BaseFloatingPicker } from '../FloatingPicker';
+import { Autofill } from '../Autofill';
+import { FocusZoneDirection, FocusZone } from '../FocusZone';
+import { SelectionZone } from '../Select';
+import { IInputProps } from '../Pickers';
 //import { IBaseFloatingPickerProps, BaseFloatingPicker } from '../components';
 //import { BaseSelectedItemsList, IBaseSelectedItemsListProps } from '../../SelectedItemsList';
 //import { FocusZone, FocusZoneDirection } from '../FocusZone';
 //import { Selection, SelectionMode, SelectionZone } from '../../Selection';
 // tslint:disable-next-line:no-any
-const styles: any = stylesImport;
+
 
 export interface IBaseExtendedPickerState<T> {
   queryString: string | null;

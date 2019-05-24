@@ -12,7 +12,7 @@ import {
   compareDatePart
 } from '@uifabric/utilities/dateMath/DateMath';
 import { Icon } from '../Icon';
-import * as stylesImport from './Calendar.scss';
+import * as stylesImport from './CalendarStyle';
 import { CalendarYear, ICalendarYearRange } from './CalendarYear';
 const styles: any = stylesImport;
 

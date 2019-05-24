@@ -3,7 +3,7 @@ import { BaseComponent } from '@uifabric/utilities';
 import { ComboBox } from './ComboBox';
 import { IComboBoxProps, IComboBox } from './ComboBox.types';
 import { IList, List } from '../List';
-import { ISelectableOption } from '@uifabric/utilities/selectableOption/SelectableOption.types';
+import { ISelectableOption } from '../Select';
 
 export class VirtualizedComboBox extends BaseComponent<IComboBoxProps, {}> implements IComboBox {
   /** The combo box element */

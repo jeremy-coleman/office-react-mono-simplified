@@ -1,4 +1,4 @@
-export { SelectableOptionMenuItemType } from '@uifabric/utilities/selectableOption/SelectableOption.types';
+//export { SelectableOptionMenuItemType } from '../Select';
 export * from './ComboBox';
 export * from './ComboBox.types';
 export * from './VirtualizedComboBox';

@@ -2,8 +2,8 @@ import * as React from 'react';
 import { BaseComponent, KeyCodes, css, elementContains, getId, classNamesFunction, styled } from '@uifabric/utilities';
 import { IProcessedStyleSet } from '@uifabric/styling';
 import { IFocusZone, FocusZone, FocusZoneDirection } from '../FocusZone';
-import { Callout, DirectionalHint } from '../Callout';
-import { Selection, SelectionMode } from '@uifabric/utilities';
+import { Callout } from '../Callout';
+import { Selection, SelectionMode, DirectionalHint } from '@uifabric/utilities';
 import { Suggestions } from './Suggestions/Suggestions';
 import { ISuggestions, ISuggestionsProps, ISuggestionsStyleProps, ISuggestionsStyles } from './Suggestions/Suggestions.types';
 import { getStyles as suggestionsStyles } from './Suggestions/Suggestions.styles';
@@ -11,9 +11,9 @@ import { SuggestionsController } from './Suggestions/SuggestionsController';
 import { IBasePicker, IBasePickerProps, ValidationState, IBasePickerStyleProps, IBasePickerStyles } from './BasePicker.types';
 import { IAutofill, Autofill } from '../Autofill/index';
 import { IPickerItemProps } from './PickerItem.types';
-import * as stylesImport from './BasePicker.scss';
+import * as legacyStyles from './BasePickerStyle';
 import { SelectionZone } from '../Select/SelectionZone';
-const legacyStyles: any = stylesImport;
+
 
 export interface IBasePickerState {
   items?: any;
@@ -234,7 +234,7 @@ export class BasePicker<T, P extends IBasePickerProps<T>> extends BaseComponent<
         })
       : {
           root: css('ms-BasePicker', className ? className : ''),
-          text: css('ms-BasePicker-text', legacyStyles.pickerText, this.state.isFocused && legacyStyles.inputFocused),
+          text: css('ms-BasePicker-text', legacyStyles.pickerText, this.state.isFocused && legacyStyles.pickerTextInputFocused),
           itemsWrapper: legacyStyles.pickerItems,
           input: css('ms-BasePicker-input', legacyStyles.pickerInput, inputProps && inputProps.className),
           screenReaderText: legacyStyles.screenReaderOnly
@@ -294,7 +294,7 @@ export class BasePicker<T, P extends IBasePickerProps<T>> extends BaseComponent<
   }
 
   protected renderSuggestions(): JSX.Element | null {
-    const StyledTypedSuggestions: React.StatelessComponent<ISuggestionsProps<T>> = this._styledSuggestions;
+    const StyledTypedSuggestions: React.FunctionComponent<ISuggestionsProps<T>> = this._styledSuggestions;
 
     return this.state.suggestionsVisible && this.input ? (
       <Callout
@@ -893,7 +893,7 @@ export class BasePickerListBelow<T, P extends IBasePickerProps<T>> extends BaseP
         })
       : {
           root: css('ms-BasePicker', className ? className : ''),
-          text: css('ms-BasePicker-text', legacyStyles.pickerText, this.state.isFocused && legacyStyles.inputFocused),
+          text: css('ms-BasePicker-text', legacyStyles.pickerText, this.state.isFocused && legacyStyles.pickerTextInputFocused),
           input: css('ms-BasePicker-input', legacyStyles.pickerInput, inputProps && inputProps.className),
           screenReaderText: legacyStyles.screenReaderOnly
         };

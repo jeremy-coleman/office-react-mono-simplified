@@ -5,8 +5,8 @@ import { CalendarDay, ICalendarDay } from './CalendarDay';
 import { CalendarMonth, ICalendarMonth } from './CalendarMonth';
 import { compareDates, getDateRangeArray } from '@uifabric/utilities/dateMath/DateMath';
 import { css, BaseComponent, KeyCodes, getNativeProps, divProperties } from '@uifabric/utilities';
-import * as stylesImport from './Calendar.scss';
-const styles: any = stylesImport;
+import * as stylesImport from './CalendarStyle';
+const styles = stylesImport;
 
 const leftArrow = 'Up';
 const rightArrow = 'Down';
@@ -163,19 +163,19 @@ export class Calendar extends BaseComponent<ICalendarProps, ICalendarState> impl
             'ms-DatePicker-picker ms-DatePicker-picker--opened ms-DatePicker-picker--focused',
             styles.picker,
             styles.pickerIsOpened,
-            styles.pickerIsFocused,
+            //styles.pickerIsFocused,
             isMonthPickerVisible && 'ms-DatePicker-monthPickerVisible ' + styles.monthPickerVisible,
-            isMonthPickerVisible && isDayPickerVisible && 'ms-DatePicker-calendarsInline ' + styles.calendarsInline,
-            monthPickerOnly && 'ms-DatePicker-monthPickerOnly ' + styles.monthPickerOnly,
-            showMonthPickerAsOverlay && 'ms-DatePicker-monthPickerAsOverlay ' + styles.monthPickerAsOverlay
+            isMonthPickerVisible && isDayPickerVisible && 'ms-DatePicker-calendarsInline ' + styles.calendarsInlineDayPicker,
+            monthPickerOnly && 'ms-DatePicker-monthPickerOnly ' + styles.monthPickerOnlyWrap,
+            showMonthPickerAsOverlay && 'ms-DatePicker-monthPickerAsOverlay ' + styles.monthPickerAsOverlayWrap
           )}
         >
           <div
-            className={css('ms-DatePicker-holder ms-slideDownIn10', styles.holder, overlayedWithButton && styles.holderWithButton)}
+            className={css('ms-DatePicker-holder ms-slideDownIn10', styles.holder, overlayedWithButton && styles.monthPickerAsOverlayHolderWithButton)}
             onKeyDown={this._onDatePickerPopupKeyDown}
           >
             <div className={css('ms-DatePicker-frame', styles.frame)}>
-              <div className={css('ms-DatePicker-wrap', styles.wrap, showGoToToday && styles.goTodaySpacing)}>
+              <div className={css('ms-DatePicker-wrap', styles.wrap, showGoToToday && styles.wrapGoTodaySpacing)}>
                 {isDayPickerVisible && (
                   <CalendarDay
                     selectedDate={selectedDate!}

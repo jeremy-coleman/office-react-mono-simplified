@@ -3,7 +3,7 @@ import { DocumentCardLocationBase } from './DocumentCardLocation.base';
 import { getStyles } from './DocumentCardLocation.styles';
 import { IDocumentCardLocationProps, IDocumentCardLocationStyleProps, IDocumentCardLocationStyles } from './DocumentCardLocation.types';
 
-export const DocumentCardLocation: React.StatelessComponent<IDocumentCardLocationProps> = styled<
+export const DocumentCardLocation: React.FunctionComponent<IDocumentCardLocationProps> = styled<
   IDocumentCardLocationProps,
   IDocumentCardLocationStyleProps,
   IDocumentCardLocationStyles

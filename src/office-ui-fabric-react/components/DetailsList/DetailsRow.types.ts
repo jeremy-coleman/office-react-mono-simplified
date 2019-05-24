@@ -158,7 +158,7 @@ export interface IDetailsRowBaseProps extends Pick<IDetailsListProps, 'onRenderI
   /**
    * DOM element into which to render row field
    */
-  rowFieldsAs?: React.StatelessComponent<IDetailsRowFieldsProps> | React.ComponentClass<IDetailsRowFieldsProps>;
+  rowFieldsAs?: React.FunctionComponent<IDetailsRowFieldsProps> | React.ComponentClass<IDetailsRowFieldsProps>;
 
   /**
    * Overriding class name

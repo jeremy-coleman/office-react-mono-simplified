@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { IRefObject, IRenderFunction, KeyCodes } from '@uifabric/utilities';
-import { IPersonaProps } from '../../Persona/Persona.types';
+import { IPersonaProps } from '../../Persona';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { ISpinnerStyleProps } from '../../Spinner/Spinner.types';
 import { ISuggestionItemProps } from './SuggestionsItem.types';

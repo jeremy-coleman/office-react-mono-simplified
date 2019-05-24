@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { classNamesFunction, BaseComponent, KeyCodes } from '@uifabric/utilities';
 import { ExpandingCardMode, IExpandingCardProps, IExpandingCardStyles, IExpandingCardStyleProps } from './ExpandingCard.types';
-import { CardCallout } from './CardCallout/CardCallout';
+import { CardCallout } from './CardCallout';
 
 const getClassNames = classNamesFunction<IExpandingCardStyleProps, IExpandingCardStyles>();
 

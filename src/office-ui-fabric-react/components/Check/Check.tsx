@@ -3,7 +3,7 @@ import { ICheckProps, ICheckStyleProps, ICheckStyles } from './Check.types';
 import { CheckBase } from './Check.base';
 import { getStyles } from './Check.styles';
 
-export const Check: React.StatelessComponent<ICheckProps> = styled<ICheckProps, ICheckStyleProps, ICheckStyles>(
+export const Check: React.FunctionComponent<ICheckProps> = styled<ICheckProps, ICheckStyleProps, ICheckStyles>(
   CheckBase,
   getStyles,
   undefined,

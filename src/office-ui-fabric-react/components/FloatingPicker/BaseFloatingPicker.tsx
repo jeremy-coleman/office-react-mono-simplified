@@ -1,14 +1,13 @@
+import { BaseComponent, css, DirectionalHint, KeyCodes } from '@uifabric/utilities';
 import * as React from 'react';
-import * as stylesImport from './BaseFloatingPicker.scss';
-import { BaseComponent, css, KeyCodes } from '@uifabric/utilities';
-import { Callout, DirectionalHint } from '../Callout';
+import { Callout } from '../Callout';
+import { ISuggestionModel } from '../Pickers/Suggestions/Suggestions.types';
 import { IBaseFloatingPicker, IBaseFloatingPickerProps } from './BaseFloatingPicker.types';
-import { ISuggestionModel } from './Suggestions';
+import * as styles from './BaseFloatingPickerStyle';
 import { ISuggestionsControlProps } from './Suggestions/Suggestions.types';
 import { SuggestionsControl } from './Suggestions/SuggestionsControl';
 import { SuggestionsStore } from './Suggestions/SuggestionsStore';
-// tslint:disable-next-line:no-any
-const styles: any = stylesImport;
+
 
 export interface IBaseFloatingPickerState {
   queryString: string;

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { KeyCodes, css, getRTL } from '@uifabric/utilities';
 import { ICalendarIconStrings } from './Calendar.types';
 import { FocusZone } from '../FocusZone';
-import * as stylesImport from './Calendar.scss';
+import * as stylesImport from './CalendarStyle';
 import { Icon } from '../Icon';
 
 const styles: any = stylesImport;

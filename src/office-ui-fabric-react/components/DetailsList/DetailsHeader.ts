@@ -1,11 +1,11 @@
 import { styled } from '@uifabric/utilities';
-import { IDetailsHeaderProps, IDetailsHeaderBaseProps, IDetailsHeaderStyleProps, IDetailsHeaderStyles } from './DetailsHeader.types';
 import { DetailsHeaderBase } from './DetailsHeader.base';
 import { getStyles } from './DetailsHeader.styles';
+import { IDetailsHeaderBaseProps, IDetailsHeaderStyleProps, IDetailsHeaderStyles } from './DetailsHeader.types';
 
-export { IDetailsHeaderProps, IDetailsHeaderBaseProps };
 
-export const DetailsHeader: React.StatelessComponent<IDetailsHeaderBaseProps> = styled<
+
+export const DetailsHeader: React.FunctionComponent<IDetailsHeaderBaseProps> = styled<
   IDetailsHeaderBaseProps,
   IDetailsHeaderStyleProps,
   IDetailsHeaderStyles

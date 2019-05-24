@@ -4,9 +4,8 @@ import { css } from '@uifabric/utilities';
 import { Persona, PersonaSize, IPersonaProps, PersonaPresence } from '../../../Persona';
 import { IBasePickerSuggestionsProps, ISuggestionItemProps } from '../../../Pickers';
 
-//@ts-ignore
-import * as stylesImport from './SuggestionItemDefault.scss';
-const styles: any = stylesImport;
+
+import * as styles from './SuggestionItemDefaultStyle';
 
 /**
  * @deprecated Use the exported from the package level 'PeoplePickerItemSuggestion'. Will be removed in Fabric 7.0

@@ -5,9 +5,8 @@ import { BaseComponent, css, getId } from '@uifabric/utilities';
 import { Persona, PersonaSize } from '../../../Persona';
 import { ISelectedPeopleItemProps } from '../SelectedPeopleList';
 import { IconButton } from '../../../Button';
-import * as stylesImport from './ExtendedSelectedItem.scss';
-// tslint:disable-next-line:no-any
-const styles: any = stylesImport;
+import * as styles from './ExtendedSelectedItemStyle';
+
 
 export interface IPeoplePickerItemState {
   contextualMenuVisible: boolean;
@@ -30,8 +29,8 @@ export class ExtendedSelectedItem extends BaseComponent<ISelectedPeopleItemProps
         className={css(
           'ms-PickerPersona-container',
           styles.personaContainer,
-          { ['is-selected ' + styles.personaContainerIsSelected]: selected },
-          { ['is-invalid ' + styles.validationError]: !item.isValid }
+          { ['is-selected ' + styles.personaContainerPersonaContainerIsSelected]: selected },
+          { ['is-invalid ' + styles.personaContainerValidationError]: !item.isValid }
         )}
         data-is-focusable={true}
         data-is-sub-focuszone={true}
@@ -43,12 +42,12 @@ export class ExtendedSelectedItem extends BaseComponent<ISelectedPeopleItemProps
           <IconButton
             onClick={this._onClickIconButton(onExpandItem)}
             iconProps={{ iconName: 'Add', style: { fontSize: '14px' } }}
-            className={css('ms-PickerItem-removeButton', styles.expandButton, styles.actionButton)}
+            className={css('ms-PickerItem-removeButton', styles.personaContainerExpandButton, styles.personaContainerActionButton)}
             ariaLabel={removeButtonAriaLabel}
           />
         </div>
-        <div className={css(styles.personaWrapper)}>
-          <div className={css('ms-PickerItem-content', styles.itemContent)} id={'selectedItemPersona-' + itemId}>
+        <div className={css(styles.personaContainerPersonaWrapper)}>
+          <div className={css('ms-PickerItem-content', styles.personaContainerItemContent)} id={'selectedItemPersona-' + itemId}>
             <Persona
               {...item}
               onRenderCoin={this.props.renderPersonaCoin}
@@ -59,7 +58,7 @@ export class ExtendedSelectedItem extends BaseComponent<ISelectedPeopleItemProps
           <IconButton
             onClick={this._onClickIconButton(onRemoveItem)}
             iconProps={{ iconName: 'Cancel', style: { fontSize: '14px' } }}
-            className={css('ms-PickerItem-removeButton', styles.removeButton, styles.actionButton)}
+            className={css('ms-PickerItem-removeButton', styles.personaContainerRemoveButton, styles.personaContainerActionButton)}
             ariaLabel={removeButtonAriaLabel}
           />
         </div>

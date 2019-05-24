@@ -6,8 +6,8 @@ import { IPeoplePickerItemSelectedProps } from './PeoplePickerItem.types';
 import { ValidationState } from '../../BasePicker.types';
 import { IconButton } from '../../../Button';
 
-import * as stylesImport from './PickerItemsDefault.scss';
-const styles: any = stylesImport;
+import * as stylesImport from './PickerItemsDefaultStyle';
+const styles = stylesImport;
 
 /**
  * @deprecated Use the exported from the package level 'PeoplePickerItem'. Will be removed in Fabric 7.
@@ -32,7 +32,7 @@ export const SelectedItemDefault: (props: IPeoplePickerItemSelectedProps) => JSX
         'ms-PickerPersona-container',
         styles.personaContainer,
         { ['is-selected ' + styles.personaContainerIsSelected]: selected },
-        { ['is-invalid ' + styles.validationError]: item.ValidationState === ValidationState.warning }
+        { ['is-invalid ' + styles.personaContainerValidationError]: item.ValidationState === ValidationState.warning }
       )}
       data-is-focusable={true}
       data-is-sub-focuszone={true}
@@ -40,13 +40,13 @@ export const SelectedItemDefault: (props: IPeoplePickerItemSelectedProps) => JSX
       role={'listitem'}
       aria-labelledby={'selectedItemPersona-' + itemId}
     >
-      <div className={css('ms-PickerItem-content', styles.itemContent)} id={'selectedItemPersona-' + itemId}>
+      <div className={css('ms-PickerItem-content', styles.personaContainerItemContent)} id={'selectedItemPersona-' + itemId}>
         <Persona {...item} presence={item.presence !== undefined ? item.presence : PersonaPresence.none} size={PersonaSize.size28} />
       </div>
       <IconButton
         onClick={onClickIconButton(onRemoveItem)}
         iconProps={{ iconName: 'Cancel', style: { fontSize: '12px' } }}
-        className={css('ms-PickerItem-removeButton', styles.removeButton)}
+        className={css('ms-PickerItem-removeButton', styles.personaContainerRemoveButton)}
         ariaLabel={removeButtonAriaLabel}
       />
     </div>

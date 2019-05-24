@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { BaseComponent, classNamesFunction, getId, allowScrollOnElement, KeyCodes } from '@uifabric/utilities';
-import { FocusTrapZone, IFocusTrapZone } from '../FocusTrapZone/index';
+import { FocusTrapZone, IFocusTrapZone } from '../FocusTrapZone';
 import { animationDuration } from './Modal.styles';
 import { IModalProps, IModalStyleProps, IModalStyles, IModal } from './Modal.types';
 import { Overlay } from '../Overlay';
 import { ILayerProps, Layer } from '../Layer';
-import { Popup } from '../Popup/index';
+import { Popup } from '../Popup';
 import { withResponsiveMode, ResponsiveMode } from '@uifabric/utilities/decorators/withResponsiveMode';
-import { DirectionalHint } from '../Callout/index';
-import { Icon } from '../Icon/index';
-import { DraggableZone, IDragData } from '@uifabric/utilities/DraggableZone/index';
+import { DirectionalHint } from '@uifabric/utilities';
+import { Icon } from '../Icon';
+import { DraggableZone, IDragData } from '../DraggableZone';
 
 // @TODO - need to change this to a panel whenever the breakpoint is under medium (verify the spec)
 

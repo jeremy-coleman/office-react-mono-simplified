@@ -3,7 +3,7 @@ import { ColorSliderBase } from './ColorSlider.base';
 import { getStyles } from './ColorSlider.styles';
 import { IColorSliderProps, IColorSliderStyleProps, IColorSliderStyles } from './ColorSlider.types';
 
-export const ColorSlider: React.StatelessComponent<IColorSliderProps> = styled<
+export const ColorSlider: React.FunctionComponent<IColorSliderProps> = styled<
   IColorSliderProps,
   IColorSliderStyleProps,
   IColorSliderStyles

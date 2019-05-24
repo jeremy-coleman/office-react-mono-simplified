@@ -1,11 +1,10 @@
 import { styled } from '@uifabric/utilities';
-import { IDetailsListProps, IDetailsListStyleProps, IDetailsListStyles } from './DetailsList.types';
 import { DetailsListBase } from './DetailsList.base';
 import { getStyles } from './DetailsList.styles';
+import { IDetailsListProps, IDetailsListStyleProps, IDetailsListStyles } from './DetailsList.types';
 
-export { IDetailsListProps };
 
-export const DetailsList: React.StatelessComponent<IDetailsListProps> = styled<
+export const DetailsList: React.FunctionComponent<IDetailsListProps> = styled<
   IDetailsListProps,
   IDetailsListStyleProps,
   IDetailsListStyles

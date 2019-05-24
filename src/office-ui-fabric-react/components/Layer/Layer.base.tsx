@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Fabric } from '../../Fabric';
+import { Fabric } from '../Fabric';
 import { ILayerProps, ILayerStyleProps, ILayerStyles } from './Layer.types';
 import {
   classNamesFunction,

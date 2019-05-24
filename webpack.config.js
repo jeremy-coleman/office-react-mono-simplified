@@ -13,12 +13,12 @@ const endsWith = (...extensions) => (filestring) => extensions.some(ext => files
 module.exports = {
         stats: "minimal",
         mode: "production",
-        entry: './src/index.ts',
+        entry: './src/office-ui-fabric-react/index.ts',
         output: {
             filename: "[name].js",
             path: path.join(__dirname, "lib")
         },
-        externals: ['react', 'react-dom'],
+        externals: ['react', 'react-dom', 'prop-types'],
         module: {
             rules: [
                 // {

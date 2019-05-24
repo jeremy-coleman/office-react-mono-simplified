@@ -18,7 +18,7 @@ import {
   getMonthEnd
 } from '@uifabric/utilities/dateMath/DateMath';
 
-import * as stylesImport from './Calendar.scss';
+import * as stylesImport from './CalendarStyle';
 const styles: any = stylesImport;
 
 const DAYS_IN_WEEK = 7;

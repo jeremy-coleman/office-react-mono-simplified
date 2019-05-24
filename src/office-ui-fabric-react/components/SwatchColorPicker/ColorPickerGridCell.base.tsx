@@ -6,8 +6,8 @@ import {
   IColorPickerGridCellStyles
 } from './ColorPickerGridCell.types';
 import { getColorFromString } from '@uifabric/utilities/color/getColorFromString';
-import { GridCell } from '@uifabric/utilities/grid/GridCell';
-import { IGridCellProps } from '@uifabric/utilities/grid/GridCell.types';
+import { GridCell } from '../Grid';
+import { IGridCellProps } from '../Grid';
 import { IButtonClassNames } from '../Button/BaseButton.classNames';
 import { getStyles as getActionButtonStyles } from '../Button/ActionButton/ActionButton.styles';
 import { mergeStyleSets, ITheme } from '@uifabric/styling';

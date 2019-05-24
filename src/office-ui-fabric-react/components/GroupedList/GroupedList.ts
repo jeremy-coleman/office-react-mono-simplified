@@ -1,10 +1,10 @@
 import { styled } from '@uifabric/utilities';
-import { getStyles } from './GroupedList.styles';
 import { GroupedListBase } from './GroupedList.base';
-import { IGroupedListProps, IGroupedListStyles, IGroupedListStyleProps } from './GroupedList.types';
-export { IGroupedListProps };
+import { getStyles } from './GroupedList.styles';
+import { IGroupedListProps, IGroupedListStyleProps, IGroupedListStyles } from './GroupedList.types';
 
-export const GroupedList: React.StatelessComponent<IGroupedListProps> = styled<
+
+export const GroupedList: React.FunctionComponent<IGroupedListProps> = styled<
   IGroupedListProps,
   IGroupedListStyleProps,
   IGroupedListStyles

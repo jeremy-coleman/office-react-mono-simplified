@@ -1,33 +1,19 @@
-import * as React from 'react';
-import { DetailsListBase } from './DetailsList.base';
-import { ISelection, SelectionMode } from '@uifabric/utilities';
-import { IRefObject, IBaseProps, IRenderFunction } from '@uifabric/utilities';
-import { IDragDropEvents, IDragDropContext, IDragDropHelper, IDragDropOptions } from '@uifabric/utilities';
-import { IGroup, IGroupRenderProps, IGroupDividerProps, IGroupedListProps } from '../GroupedList/index';
-import { IDetailsRowProps, IDetailsRowBaseProps } from '../DetailsList/DetailsRow';
-import { IDetailsHeaderProps, IDetailsHeaderBaseProps } from './DetailsHeader';
-import { IDetailsFooterProps, IDetailsFooterBaseProps } from './DetailsFooter.types';
-import { IWithViewportProps, IViewport } from '@uifabric/utilities/decorators/withViewport';
-import { IList, IListProps, ScrollToMode } from '../List/index';
-import { ITheme, IStyle } from '@uifabric/styling';
-import { ICellStyleProps, IDetailsItemProps } from './DetailsRow.types';
-import { IDetailsColumnProps } from './DetailsColumn';
-import { IDetailsCheckboxProps } from './DetailsRowCheck.types';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
+import { IStyle, ITheme } from '@uifabric/styling';
+import { IBaseProps, IDragDropContext, IDragDropEvents, IRefObject, IRenderFunction, ISelection, SelectionMode } from '@uifabric/utilities';
+import { IViewport, IWithViewportProps } from '@uifabric/utilities/decorators/withViewport';
+import * as React from 'react';
+import { IDetailsRowProps } from '../DetailsList/DetailsRow';
+import { IGroup, IGroupDividerProps, IGroupedListProps, IGroupRenderProps } from '../GroupedList/index';
+import { IList, IListProps, ScrollToMode } from '../List/index';
 import { ISelectionZoneProps } from '../Select/SelectionZone';
+import { IDetailsColumnProps } from './DetailsColumn';
+import { IDetailsFooterProps } from './DetailsFooter.types';
+import { IDetailsHeaderProps } from './DetailsHeader.types';
+import { DetailsListBase } from './DetailsList.base';
+import { ICellStyleProps, IDetailsItemProps } from './DetailsRow.types';
+import { IDetailsCheckboxProps } from './DetailsRowCheck.types';
 
-export {
-  IDetailsHeaderProps,
-  IDetailsRowBaseProps,
-  IDetailsHeaderBaseProps,
-  IDetailsFooterBaseProps,
-  IDragDropContext,
-  IDragDropEvents,
-  IDragDropHelper,
-  IDragDropOptions,
-  IViewport,
-  IWithViewportProps
-};
 
 /**
  * {@docCategory DetailsList}
