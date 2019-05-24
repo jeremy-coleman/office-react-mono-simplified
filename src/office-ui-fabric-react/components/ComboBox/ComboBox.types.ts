@@ -6,7 +6,8 @@ import { IButtonStyles } from '../Button';
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import { IComboBoxClassNames } from './ComboBox.classNames';
 import { IKeytipProps } from '../Keytip';
-import { IAutofillProps } from '../Pickers/AutoFill/BaseAutoFill.types';
+import { IAutofillProps } from '../Autofill';
+//import { IAutofillProps } from '../Autofill/BaseAutoFill.types';
 
 /**
  * {@docCategory ComboBox}

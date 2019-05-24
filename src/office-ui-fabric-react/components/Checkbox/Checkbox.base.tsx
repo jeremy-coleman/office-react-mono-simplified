@@ -2,7 +2,7 @@ import * as React from 'react';
 import { getId, classNamesFunction, mergeAriaAttributeValues, initializeComponentRef, warnMutuallyExclusive } from '@uifabric/utilities';
 import { Icon } from '../Icon';
 import { ICheckbox, ICheckboxProps, ICheckboxStyleProps, ICheckboxStyles } from './Checkbox.types';
-import { KeytipData } from '../Keytip';
+import { KeytipData } from '../KeytipData';
 
 export interface ICheckboxState {
   /** Is true when Uncontrolled control is checked. */

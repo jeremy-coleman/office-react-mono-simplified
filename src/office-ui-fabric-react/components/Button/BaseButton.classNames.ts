@@ -1,5 +1,5 @@
 import { memoizeFunction } from '@uifabric/utilities';
-import { ITheme, mergeStyleSets } from '@uifabric/styling';
+import { ITheme, mergeStyleSets, getTheme } from '@uifabric/styling';
 import { IButtonStyles } from './Button.types';
 import { getGlobalClassNames } from '@uifabric/styling';
 
@@ -38,7 +38,7 @@ export const getBaseButtonClassNames = memoizeFunction(
     expanded: boolean,
     isSplit: boolean | undefined
   ): IButtonClassNames => {
-    const classNames = getGlobalClassNames(ButtonGlobalClassNames, theme || {});
+    const classNames = getGlobalClassNames(ButtonGlobalClassNames, theme || getTheme());
 
     const isExpanded = expanded && !isSplit;
     return mergeStyleSets({

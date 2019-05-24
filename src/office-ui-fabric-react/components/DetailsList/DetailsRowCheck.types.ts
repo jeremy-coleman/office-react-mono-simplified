@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { IStyle, ITheme } from '@uifabric/styling';
-import { IStyleFunctionOrObject, IRenderFunction } from '@uifabric/utilities';
+import { IStyle, ITheme , IStyleFunctionOrObject} from '@uifabric/styling';
+import {  IRenderFunction } from '@uifabric/utilities';
 
 /**
  * {@docCategory DetailsList}

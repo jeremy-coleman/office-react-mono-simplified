@@ -153,7 +153,7 @@ export class CommandBarBase extends BaseComponent<ICommandBarProps, {}> implemen
     return this._commandButton(item, commandButtonProps);
   };
 
-  private _commandButton = (item: ICommandBarItemProps, props: ICommandBarItemProps): JSX.Element => {
+  private _commandButton = (item: ICommandBarItemProps, props: ICommandBarItemProps | IButtonProps) => {
     if (this.props.buttonAs) {
       const Type = this.props.buttonAs;
       return <Type {...props as IButtonProps} defaultRender={CommandBarButton} />;

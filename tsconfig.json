@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "rootDir": "./src",
+    "declaration": true,
     "outDir": "lib",
     "target": "esnext",
     "module": "esnext",

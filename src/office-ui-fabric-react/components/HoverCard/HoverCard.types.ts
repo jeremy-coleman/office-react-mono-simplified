@@ -3,7 +3,7 @@ import * as React from 'react';
 import { IExpandingCardProps } from './ExpandingCard.types';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject, KeyCodes } from '@uifabric/utilities';
-import { IPlainCardProps } from './PlainCard/PlainCard.types';
+import { IPlainCardProps } from './PlainCard';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 /**
  * {@docCategory HoverCard}

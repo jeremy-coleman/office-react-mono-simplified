@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { SliderBase } from './Slider.base';
-import { IStyle, ITheme } from '@uifabric/styling';
-import { IStyleFunctionOrObject, IRefObject } from '@uifabric/utilities';
+import { IStyle, ITheme, IStyleFunctionOrObject } from '@uifabric/styling';
+import { IRefObject } from '@uifabric/utilities';
 
 /**
  * {@docCategory Slider}

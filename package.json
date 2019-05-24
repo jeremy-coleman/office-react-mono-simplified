@@ -9,10 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config=webpack.config.js",
-    "build2": "tsc -p tsconfig.json",
-    "build:fabricui": "tsc -p tsconfig.fabricui.json",
-    "build:officeui": "tsc -p tsconfig.officeui.json ",
-    "build3": "node ./node_modules/.bin/tsc -p tsconfig.json --max_old_space 4000"
+    "transpile": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "react": "16.8.6",
@@ -21,7 +18,7 @@
     "tslib": "1.9.3"
   },
   "devDependencies": {
-    "@types/react":"16.8.18",
+    "@types/react":"16.8.11",
     "@types/react-dom":"16.8.4",
     "@types/node":"12.0.2",
     "unused-files-webpack-plugin": "3.4.0",

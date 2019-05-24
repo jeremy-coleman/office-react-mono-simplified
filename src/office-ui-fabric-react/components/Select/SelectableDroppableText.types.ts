@@ -1,7 +1,8 @@
 import { IRefObject, IRenderFunction } from '@uifabric/utilities';
 import * as React from 'react';
-import { ICalloutProps, IPanelProps } from '../Callout';
+import { ICalloutProps } from '../Callout';
 import { ISelectableOption } from './SelectableOption.types';
+import { IPanelProps } from '../Panel';
 
 /**
  * TComponent - Component used for reference properties, such as componentRef

@@ -3,8 +3,8 @@ import { FacepileBase } from './Facepile.base';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject } from '@uifabric/utilities';
 import { IButtonProps } from '../Button';
-import { IPersonaSharedProps, PersonaInitialsColor, PersonaSize } from '../Pesona';
-import { IKeytipProps } from '../Keyip';
+import { IPersonaSharedProps, PersonaInitialsColor, PersonaSize } from '../Persona';
+import { IKeytipProps } from '../Keytip';
 import { IStyleFunctionOrObject } from '@uifabric/merge-styles';
 /**
  * {@docCategory Facepile}
