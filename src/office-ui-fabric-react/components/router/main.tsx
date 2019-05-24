@@ -1,6 +1,28 @@
 import * as React from 'react';
 import { initializeComponentRef, on } from '@uifabric/utilities';
-import { IRouteProps } from './Route';
+
+
+export interface IRouteProps extends React.ClassAttributes<Route> {
+  path?: string;
+
+  children?: React.ReactNode;
+
+  /**
+   * The component to render for this route's content (or a loading placeholder if `getComponent` is provided).
+   */
+  component?: React.ComponentType<any>;
+
+  /**
+   * Function that loads the component asynchronously.
+   * Notify when loading has finished using `cb`.
+   * If `component` is provided, it will be rendered while waiting for the callback.
+   */
+  getComponent?: (cb: (component: React.ComponentType<any>) => void) => void;
+}
+
+export class Route extends React.PureComponent<IRouteProps> {}
+
+
 
 export interface IRouterProps {
   /**

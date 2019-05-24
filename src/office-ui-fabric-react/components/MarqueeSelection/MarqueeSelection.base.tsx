@@ -10,8 +10,8 @@ import {
   getDistanceBetweenPoints,
   getRTL
 } from '@uifabric/utilities';
+import { IMarqueeSelectionStyleProps, IMarqueeSelectionStyles, IMarqueeSelectionProps } from './MarqueeSelection';
 
-import { IMarqueeSelectionProps, IMarqueeSelectionStyleProps, IMarqueeSelectionStyles } from './MarqueeSelection.types';
 
 const getClassNames = classNamesFunction<IMarqueeSelectionStyleProps, IMarqueeSelectionStyles>();
 

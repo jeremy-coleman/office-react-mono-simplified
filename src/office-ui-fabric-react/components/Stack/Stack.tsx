@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { withSlots, createComponent, getSlots } from '@uifabric/foundation';
 import { getNativeProps, htmlElementProperties, warnDeprecations } from '@uifabric/utilities';
-import StackItem from './StackItem/StackItem';
+import {StackItem} from './StackItem/StackItem';
 import { IStackItemProps } from './StackItem/StackItem.types';
 import { styles } from './Stack.styles';
 import { IStackComponent, IStackProps, IStackSlots } from './Stack.types';

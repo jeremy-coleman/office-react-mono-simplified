@@ -1,10 +1,10 @@
-import { IKeytipProps } from './IKeytipProps';
+import { IKeytipLike } from './IKeytipLike';
 import { arraysEqual, replaceElement, findIndex, find, EventGroup, getId } from '@uifabric/utilities';
 import { KeytipEvents } from './KeytipConstants';
 
 export interface IUniqueKeytip {
   uniqueID: string;
-  keytip: IKeytipProps;
+  keytip: IKeytipLike;
 }
 
 /**
@@ -40,8 +40,8 @@ export class KeytipManager {
    * @param persisted - T/F if this keytip should be persisted, default is false
    * @returns {string} Unique ID for this keytip
    */
-  public register(keytipProps: IKeytipProps, persisted: boolean = false): string {
-    let props: IKeytipProps = keytipProps;
+  public register(keytipProps: IKeytipLike, persisted: boolean = false): string {
+    let props: IKeytipLike = keytipProps;
     if (!persisted) {
       // Add the overflowSetSequence if necessary
       props = this.addParentOverflow(keytipProps);
@@ -66,7 +66,7 @@ export class KeytipManager {
    * @param keytipProps - Keytip to update
    * @param uniqueID - Unique ID of this keytip
    */
-  public update(keytipProps: IKeytipProps, uniqueID: string): void {
+  public update(keytipProps: IKeytipLike, uniqueID: string): void {
     const newKeytipProps = this.addParentOverflow(keytipProps);
     const uniqueKeytip = this._getUniqueKtp(newKeytipProps, uniqueID);
     const keytipIndex = findIndex(this.keytips, (ktp: IUniqueKeytip) => {
@@ -92,7 +92,7 @@ export class KeytipManager {
    * @param uniqueID - Unique ID of this keytip
    * @param persisted - T/F if this keytip should be persisted, default is false
    */
-  public unregister(keytipToRemove: IKeytipProps, uniqueID: string, persisted: boolean = false): void {
+  public unregister(keytipToRemove: IKeytipLike, uniqueID: string, persisted: boolean = false): void {
     if (persisted) {
       // Remove keytip from this.persistedKeytips
       this.persistedKeytips = this.persistedKeytips.filter((uniqueKtp: IUniqueKeytip) => {
@@ -131,7 +131,7 @@ export class KeytipManager {
    *
    * @returns {IKeytipProps[]} All keytips stored in the manager
    */
-  public getKeytips(): IKeytipProps[] {
+  public getKeytips(): IKeytipLike[] {
     return this.keytips.map((uniqueKeytip: IUniqueKeytip) => {
       return uniqueKeytip.keytip;
     });
@@ -143,11 +143,11 @@ export class KeytipManager {
    * @param keytipProps - Keytip props to add overflowSetSequence to if necessary
    * @returns {IKeytipProps} - Modified keytip props, if needed to be modified
    */
-  public addParentOverflow(keytipProps: IKeytipProps): IKeytipProps {
+  public addParentOverflow(keytipProps: IKeytipLike): IKeytipLike {
     const fullSequence = [...keytipProps.keySequences];
     fullSequence.pop();
     if (fullSequence.length !== 0) {
-      const parentKeytip = find(this.getKeytips(), (keytip: IKeytipProps) => {
+      const parentKeytip = find(this.getKeytips(), (keytip: IKeytipLike) => {
         return arraysEqual(fullSequence, keytip.keySequences);
       });
       if (parentKeytip && parentKeytip.overflowSetSequence) {
@@ -180,7 +180,7 @@ export class KeytipManager {
    * @param uniqueID - Unique ID, will default to the next unique ID if not passed
    * @returns {IUniqueKeytip} IUniqueKeytip object
    */
-  private _getUniqueKtp(keytipProps: IKeytipProps, uniqueID: string = getId()): IUniqueKeytip {
+  private _getUniqueKtp(keytipProps: IKeytipLike, uniqueID: string = getId()): IUniqueKeytip {
     return { keytip: { ...keytipProps }, uniqueID };
   }
 }

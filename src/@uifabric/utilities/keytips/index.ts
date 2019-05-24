@@ -1,4 +1,3 @@
-export * from "./IKeytipProps";
 export * from "./IKeytipTransitionKey";
 export * from "./KeytipConfig";
 export * from "./KeytipConstants";

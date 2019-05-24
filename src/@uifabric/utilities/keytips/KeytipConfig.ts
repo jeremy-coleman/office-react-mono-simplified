@@ -1,4 +1,4 @@
-import { IKeytipProps } from './IKeytipProps';
+import { IKeytipLike } from './IKeytipLike';
 
 export interface IKeytipConfig {
   keytips: IKeytipConfigItem[];
@@ -24,7 +24,7 @@ export interface IKeytipConfigItem {
   /**
    * Optional props in IKeytipProps
    */
-  optionalProps?: Partial<IKeytipProps>;
+  optionalProps?: Partial<IKeytipLike>;
 
   /**
    * Children keytips of this keytip
@@ -33,7 +33,7 @@ export interface IKeytipConfigItem {
 }
 
 export interface IKeytipConfigMap {
-  [id: string]: IKeytipProps;
+  [id: string]: IKeytipLike;
 }
 
 /**
@@ -65,7 +65,7 @@ export function constructKeytip(configMap: IKeytipConfigMap, parentSequence: str
   const keytipSequence = parentSequence.concat(sequence);
 
   // Save props in configMap
-  const keytipProps: IKeytipProps = { ...keytip.optionalProps, keySequences: keytipSequence, content: keytip.content };
+  const keytipProps: IKeytipLike = { ...keytip.optionalProps, keySequences: keytipSequence, content: keytip.content };
   configMap[keytip.id] = keytipProps;
 
   if (keytip.children) {

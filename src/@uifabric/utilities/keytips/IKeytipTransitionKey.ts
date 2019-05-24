@@ -1,4 +1,7 @@
-import { find, KeyCodes } from '@uifabric/utilities';
+import { KeyCodes } from "../KeyCodes";
+import { find } from "../array";
+
+//import { find, KeyCodes } from '@uifabric/utilities';
 
 export enum KeytipTransitionModifier {
   shift = KeyCodes.shift,

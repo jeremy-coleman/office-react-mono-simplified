@@ -4,7 +4,7 @@ import { getDocument } from './dom/getDocument';
 
 import { SessionStorage } from './storage';
 
-import { setRTL as mergeStylesSetRTL } from '@uifabric/merge-styles';
+import { mergeStylesSetRTL } from '@uifabric/merge-styles';
 
 const RTL_LOCAL_STORAGE_KEY = 'isRTL';
 

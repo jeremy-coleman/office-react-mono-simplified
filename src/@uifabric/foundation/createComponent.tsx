@@ -3,8 +3,8 @@ import {  ITheme } from '@uifabric/styling';
 import { concatStyleSets, IStyleSet } from '@uifabric/merge-styles';
 import { Customizations, CustomizerContext, ICustomizerContext } from '@uifabric/utilities';
 import { createFactory } from './slots';
-//import { assign } from './utilities';
-const {assign} = Object
+import { __assign as assign} from 'tslib';
+
 import {
   IComponentOptions,
   ICustomizationProps,

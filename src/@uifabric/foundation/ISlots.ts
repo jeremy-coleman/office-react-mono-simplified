@@ -1,6 +1,11 @@
 import { IStyle } from '@uifabric/merge-styles';
 import { IComponentStyles, IPropsWithChildren } from './IComponent';
 
+//whats the point of all this... everything ends up on props anyway
+//also a slot is an html element, this should be named something different
+//https://www.merriam-webster.com/dictionary/semantic
+//https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot
+
 /**
  * Signature of components that have component factories.
  */
@@ -60,7 +65,7 @@ export type ValidShorthand = string | number | boolean;
  */
 // We can constrain TProps more clearly (notably also exclude Functions) once this TS PR is merged:
 // https://github.com/Microsoft/TypeScript/pull/29317
-export type ValidProps = object;
+export type ValidProps = object
 
 /**
  * Extracts props type from ISlotProp definition.

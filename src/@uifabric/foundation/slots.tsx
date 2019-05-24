@@ -32,7 +32,7 @@ const {assign} = Object
  * See React.createElement
  */
 // Can't use typeof on React.createElement since it's overloaded. Approximate createElement's signature for now and widen as needed.
-export function withSlots<P>(
+export function withSlots2<P>(
   type: ISlot<P> | React.FunctionComponent<P> | string,
   props?: React.Attributes & P | null,
   // tslint:disable-next-line:missing-optional-annotation
@@ -71,32 +71,18 @@ export function withSlots<P>(
 type K<P> = ISlot<P> | React.FunctionComponent<P> | string;
 type Proptional<P> = React.PropsWithChildren<P>
 
-export function withBetterSlots<P>(type: K<P>, props?: Proptional<P>) {
+export function withSlots<P>(type: K<P>, props?: Proptional<P>) {
   const slotType = type as ISlot<P>;
+  
   if (slotType.isSlot) {
-    // TODO: There is something weird going on here with children embedded in props vs. rest args.
-    // Comment out these lines to see. Make sure this function is doing the right things.
     const numChildren = React.Children.count(props.children);
     if (numChildren === 0) {
       return slotType(props);
     }
+    //let children = React.Children.toArray(props.children);
 
-    // Since we are bypassing createElement, use React.Children.toArray to make sure children are properly assigned keys.
-    // TODO: should this be mutating? does React mutate children subprop with createElement?
-    // TODO: will toArray clobber existing keys?
-    // TODO: React generates warnings because it doesn't detect hidden member _store that is set in createElement.
-    //        Even children passed to createElement without keys don't generate this warning.
-    //        Is there a better way to prevent slots from appearing in hierarchy? toArray doesn't address root issue.
-    let children = React.Children.toArray(props.children);
-
-    return slotType({ ...props, children });
+    return slotType(props);
   } else {
-    // TODO: Are there some cases where children should NOT be spread? Also, spreading reraises perf question.
-    //        Children had to be spread to avoid breaking KeytipData in Toggle.view:
-    //        react-dom.development.js:18931 Uncaught TypeError: children is not a function
-    //        Without spread, function child is a child array of one element
-    // TODO: is there a reason this can't be:
-    // return React.createElement.apply(this, arguments);
     return React.createElement(type, props);
   }
 }

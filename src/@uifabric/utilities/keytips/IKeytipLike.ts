@@ -1,8 +1,9 @@
-import { IPoint } from "@uifabric/utilities";
+//import { IPoint } from "@uifabric/utilities";
 import { ITheme } from "@uifabric/styling";
+import { IPoint } from "../IPoint";
 
 
-export interface IKeytipProps {
+export interface IKeytipLike {
   /**
    * Content to put inside the keytip
    */

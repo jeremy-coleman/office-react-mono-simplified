@@ -13,27 +13,29 @@ const VALUE_REPLACEMENTS: { [key: string]: string } = {
   'nw-resize': 'ne-resize'
 };
 
-let _rtl = getRTL();
+let _rtl
+/**
+ * Gets the current RTL value.
+ */
+function getRTL() {
+  if (_rtl === undefined) {
+    _rtl = typeof document !== 'undefined' && !!document.documentElement && document.documentElement.getAttribute('dir') === 'rtl';
+  }
+  return _rtl;
+}
+
+_rtl = getRTL();
 
 /**
  * Sets the current RTL value.
  */
-export function setRTL(isRTL: boolean): void {
+export function mergeStylesSetRTL(isRTL: boolean): void {
   if (_rtl !== isRTL) {
     Stylesheet.getInstance().resetKeys();
     _rtl = isRTL;
   }
 }
 
-/**
- * Gets the current RTL value.
- */
-export function getRTL(): boolean {
-  if (_rtl === undefined) {
-    _rtl = typeof document !== 'undefined' && !!document.documentElement && document.documentElement.getAttribute('dir') === 'rtl';
-  }
-  return _rtl;
-}
 
 /**
  * RTLifies the rulePair in the array at the current index. This mutates the array for performance
