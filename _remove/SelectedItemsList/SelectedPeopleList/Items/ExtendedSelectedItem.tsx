@@ -12,6 +12,7 @@ export interface IPeoplePickerItemState {
   contextualMenuVisible: boolean;
 }
 
+//@ts-ignore
 export class ExtendedSelectedItem extends BaseComponent<ISelectedPeopleItemProps, IPeoplePickerItemState> {
   protected persona = React.createRef<HTMLDivElement>();
 
@@ -21,6 +22,7 @@ export class ExtendedSelectedItem extends BaseComponent<ISelectedPeopleItemProps
   }
 
   public render(): JSX.Element {
+    //@ts-ignore
     const { item, onExpandItem, onRemoveItem, removeButtonAriaLabel, index, selected } = this.props;
     const itemId = getId();
     return (

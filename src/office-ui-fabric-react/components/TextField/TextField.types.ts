@@ -353,7 +353,7 @@ export interface ITextFieldSubComponentStyles {
 /**
  * {@docCategory TextField}
  */
-export interface ITextFieldStyles extends IStyleSet<ITextFieldStyles> {
+export interface ITextFieldBaseStyles {
   /**
    * Style for root element.
    */
@@ -404,3 +404,5 @@ export interface ITextFieldStyles extends IStyleSet<ITextFieldStyles> {
    */
   subComponentStyles: ITextFieldSubComponentStyles;
 }
+
+export type ITextFieldStyles = IStyleSet<ITextFieldBaseStyles> 

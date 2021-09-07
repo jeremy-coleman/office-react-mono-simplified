@@ -25,7 +25,7 @@ export class GroupedListBase extends BaseComponent<IGroupedListProps, IGroupedLi
     groupProps: {},
     compact: false
   };
-
+  //@ts-ignore
   public refs: {
     [key: string]: React.ReactInstance;
   };

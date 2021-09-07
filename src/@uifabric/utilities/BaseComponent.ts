@@ -17,7 +17,7 @@ import { IBaseProps } from './BaseComponent.types';
  * @public
  * {@docCategory BaseComponent}
  */
-export class BaseComponent<TProps extends IBaseProps = {}, TState = {}> extends React.Component<TProps, TState> {
+export class BaseComponent<TProps extends IBaseProps & any = {}, TState = {}> extends React.Component<TProps, TState> {
   /**
    * @deprecated Use React's error boundaries instead.
    */
@@ -66,6 +66,7 @@ export class BaseComponent<TProps extends IBaseProps = {}, TState = {}> extends 
    * When the component receives props, make sure the componentRef is updated.
    */
   public componentDidUpdate(prevProps: TProps, prevState: TState): void {
+     //@ts-ignore
     this._updateComponentRef(prevProps, this.props);
   }
 
@@ -73,6 +74,7 @@ export class BaseComponent<TProps extends IBaseProps = {}, TState = {}> extends 
    * When the component has mounted, update the componentRef.
    */
   public componentDidMount(): void {
+     //@ts-ignore
     this._setComponentRef(this.props.componentRef, this);
   }
 
@@ -80,6 +82,7 @@ export class BaseComponent<TProps extends IBaseProps = {}, TState = {}> extends 
    * If we have disposables, dispose them automatically on unmount.
    */
   public componentWillUnmount(): void {
+    //@ts-ignore
     this._setComponentRef(this.props.componentRef, null);
 
     if (this.__disposables) {

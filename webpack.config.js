@@ -1,7 +1,7 @@
 //@ts-check
 const path = require("path");
 var webpack = require('webpack')
-const TsConfigPathPlugin = require('tsconfig-paths-webpack-plugin').TsconfigPathsPlugin
+const {TsconfigPathsPlugin} = require('tsconfig-paths-webpack-plugin')
 const { UnusedFilesWebpackPlugin } = require("unused-files-webpack-plugin");
 
 const some = (...p) => filestring => p.some(e => e(filestring));
@@ -70,11 +70,12 @@ module.exports = {
         },
         resolve: {
             extensions: [".js", ".tsx", ".ts", ".jsx"],
-            plugins:[new TsConfigPathPlugin()],
+            plugins:[new TsconfigPathsPlugin()],
         },
         devtool: "source-map",
         plugins: [
             new UnusedFilesWebpackPlugin({
+                failOnUnused: false,
                 globOptions: {
                   ignore: ["*",
                   "!src/**/*.*"]

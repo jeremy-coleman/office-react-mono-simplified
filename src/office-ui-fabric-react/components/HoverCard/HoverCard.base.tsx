@@ -119,6 +119,7 @@ export class HoverCardBase extends BaseComponent<IHoverCardProps, IHoverCardStat
 
     // Common props for both card types.
     const commonCardProps = {
+      //@ts-ignore
       ...getNativeProps(this.props, divProperties),
       id: hoverCardId,
       trapFocus: !!trapFocus,

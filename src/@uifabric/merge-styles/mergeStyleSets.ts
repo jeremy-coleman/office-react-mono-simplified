@@ -28,6 +28,7 @@ export function mergeStyleSets<TStyleSet extends IStyleSet<TStyleSet>>(
 export function mergeStyleSets<TStyleSet1 extends IStyleSet<TStyleSet1>, TStyleSet2 extends IStyleSet<TStyleSet2>>(
   styleSet1: TStyleSet1 | false | null | undefined,
   styleSet2: TStyleSet2 | false | null | undefined
+   //@ts-ignore
 ): IProcessedStyleSet<TStyleSet1 & TStyleSet2>;
 
 /**
@@ -48,6 +49,7 @@ export function mergeStyleSets<
   styleSet1: TStyleSet1 | false | null | undefined,
   styleSet2: TStyleSet2 | false | null | undefined,
   styleSet3: TStyleSet3 | false | null | undefined
+   //@ts-ignore
 ): IProcessedStyleSet<TStyleSet1 & TStyleSet2 & TStyleSet3>;
 
 /**
@@ -71,6 +73,7 @@ export function mergeStyleSets<
   styleSet2: TStyleSet2 | false | null | undefined,
   styleSet3: TStyleSet3 | false | null | undefined,
   styleSet4: TStyleSet4 | false | null | undefined
+   //@ts-ignore
 ): IProcessedStyleSet<TStyleSet1 & TStyleSet2 & TStyleSet3 & TStyleSet4>;
 
 /**

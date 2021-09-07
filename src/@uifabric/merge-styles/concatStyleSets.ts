@@ -18,6 +18,7 @@ export function concatStyleSets<TStyleSet extends IStyleSet<TStyleSet>>(
 export function concatStyleSets<TStyleSet1 extends IStyleSet<TStyleSet1>, TStyleSet2 extends IStyleSet<TStyleSet2>>(
   styleSet1: TStyleSet1 | false | null | undefined,
   styleSet2: TStyleSet2 | false | null | undefined
+   //@ts-ignore
 ): IConcatenatedStyleSet<TStyleSet1 & TStyleSet2>;
 
 /**
@@ -34,6 +35,7 @@ export function concatStyleSets<
   styleSet1: TStyleSet1 | false | null | undefined,
   styleSet2: TStyleSet2 | false | null | undefined,
   styleSet3: TStyleSet3 | false | null | undefined
+   //@ts-ignore
 ): IConcatenatedStyleSet<TStyleSet1 & TStyleSet2 & TStyleSet3>;
 
 /**
@@ -53,6 +55,7 @@ export function concatStyleSets<
   styleSet2: TStyleSet2 | false | null | undefined,
   styleSet3: TStyleSet3 | false | null | undefined,
   styleSet4: TStyleSet3 | false | null | undefined
+   //@ts-ignore
 ): IConcatenatedStyleSet<TStyleSet1 & TStyleSet2 & TStyleSet3 & TStyleSet4>;
 
 /**
@@ -72,6 +75,7 @@ export function concatStyleSets<
   styleSet2: TStyleSet2 | false | null | undefined,
   styleSet3: TStyleSet3 | false | null | undefined,
   styleSet4: TStyleSet4 | false | null | undefined
+   //@ts-ignore
 ): IConcatenatedStyleSet<TStyleSet1 & TStyleSet2 & TStyleSet3 & TStyleSet4>;
 
 /**
@@ -94,6 +98,7 @@ export function concatStyleSets<
   styleSet3: TStyleSet3 | false | null | undefined,
   styleSet4: TStyleSet4 | false | null | undefined,
   styleSet5: TStyleSet5 | false | null | undefined
+   //@ts-ignore
 ): IConcatenatedStyleSet<TStyleSet1 & TStyleSet2 & TStyleSet3 & TStyleSet4 & TStyleSet5>;
 
 /**
@@ -119,6 +124,7 @@ export function concatStyleSets<
   styleSet4: TStyleSet4 | false | null | undefined,
   styleSet5: TStyleSet5 | false | null | undefined,
   styleSet6: TStyleSet6 | false | null | undefined
+   //@ts-ignore
 ): IConcatenatedStyleSet<TStyleSet1 & TStyleSet2 & TStyleSet3 & TStyleSet4 & TStyleSet5 & TStyleSet6>;
 
 /**

@@ -46,6 +46,7 @@ const createConfig = (env) => {
     };
 
     const config = {
+        devtool: "eval-cheap-source-map",
         stats: "none",
         mode: production ? "production" : "development",
         entry: {
@@ -81,17 +82,6 @@ const createConfig = (env) => {
             extensions: [".ts", ".tsx", ".js",".jsx"],
             plugins:[new TsConfigPathPlugin()]
         },
-        devtool: "cheap-eval-source-map",
-        devServer: {
-            stats: "minimal",
-            contentBase: "./dist",
-            historyApiFallback: true,
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Headers": "*"
-            },
-            port: 1337
-        },
         plugins: [
             new HtmlWebpackPlugin({
                 title: "Office UI React Sample",
@@ -101,7 +91,18 @@ const createConfig = (env) => {
                 chunksSortMode: "none"
             }),
             new ForkCheckerPlugin()
-        ]
+        ],
+        devServer: {
+            //stats: "minimal",
+            //contentBase: "./dist",
+            static: "dist",
+            historyApiFallback: true,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*"
+            },
+            port: 1337
+        },
     };
 
     return config;

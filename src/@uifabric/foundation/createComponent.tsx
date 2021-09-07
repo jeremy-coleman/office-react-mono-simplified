@@ -68,7 +68,9 @@ export function createComponent<
     const tokens = _resolveTokens(componentProps, theme, options.tokens, settings.tokens, componentProps.tokens);
     const styles = _resolveStyles(componentProps, theme, tokens, options.styles, settings.styles, componentProps.styles);
 
+     //@ts-ignore
     const viewProps = {
+       //@ts-ignore
       ...componentProps,
       styles,
       tokens,

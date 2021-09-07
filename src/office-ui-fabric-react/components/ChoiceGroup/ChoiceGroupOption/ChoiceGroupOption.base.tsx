@@ -89,7 +89,7 @@ export class ChoiceGroupOptionBase extends React.Component<IChoiceGroupOptionPro
     }
   }
 
-  private _onRenderField = (props: IChoiceGroupOptionProps): JSX.Element => {
+  private _onRenderField = (props: IChoiceGroupOptionProps, renderFunction?: any): JSX.Element => {
     const { onRenderLabel = this._onRenderLabel, id, imageSrc, imageAlt, selectedImageSrc, iconProps } = props;
 
     const imageSize = props.imageSize ? props.imageSize : { width: 32, height: 32 };

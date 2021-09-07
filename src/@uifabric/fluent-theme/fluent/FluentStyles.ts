@@ -1,4 +1,4 @@
-import { BasePickerStyles } from './styles/BasePicker.styles';
+//import { BasePickerStyles } from './styles/BasePicker.styles';
 import { BreadcrumbStyles } from './styles/Breadcrumb.styles';
 import { CheckStyles, DetailsRowStyles } from './styles/DetailsList.styles';
 import { CalloutContentStyles } from './styles/Callout.styles';
@@ -11,7 +11,7 @@ import { CommandBarStyles } from './styles/CommandBar.styles';
 import { CommandBarButtonStyles } from './styles/CommandBarButton.styles';
 import { CompoundButtonStyles } from './styles/CompoundButton.styles';
 import { ContextualMenuStyles } from './styles/ContextualMenu.styles';
-import { DatePickerStyles } from './styles/DatePicker.styles';
+//import { DatePickerStyles } from './styles/DatePicker.styles';
 import { DefaultButtonStyles } from './styles/DefaultButton.styles';
 import { DetailsColumnStyles } from './styles/DetailsColumn.styles';
 import { DialogContentStyles, DialogFooterStyles } from './styles/Dialog.styles';
@@ -23,7 +23,7 @@ import { LabelStyles } from './styles/Label.styles';
 import { LinkStyles } from './styles/Link.styles';
 import { ModalStyles } from './styles/Modal.styles';
 import { PanelStyles } from './styles/Panel.styles';
-import { PeoplePickerItemStyles } from './styles/PeoplePicker.styles';
+//import { PeoplePickerItemStyles } from './styles/PeoplePicker.styles';
 import { PersonaStyles } from './styles/Persona.styles';
 import { PivotStyles } from './styles/Pivot.styles';
 import { PrimaryButtonStyles } from './styles/PrimaryButton.styles';
@@ -31,8 +31,8 @@ import { RatingStyles } from './styles/Rating.styles';
 import { SearchBoxStyles } from './styles/SearchBox.styles';
 import { SliderStyles } from './styles/Slider.styles';
 import { SpinButtonStyles } from './styles/SpinButton.styles';
-import { SuggestionItemStyles, SuggestionsStyles } from './styles/PickerSuggestions.styles';
-import { TagItemStyles } from './styles/TagPicker.styles';
+//import { SuggestionItemStyles, SuggestionsStyles } from './styles/PickerSuggestions.styles';
+//import { TagItemStyles } from './styles/TagPicker.styles';
 import { TeachingBubbleStyles } from './styles/TeachingBubble.styles';
 import { TextFieldStyles } from './styles/TextField.styles';
 import { ToggleStyles } from './styles/Toggle.styles';
@@ -82,15 +82,15 @@ export const FluentStyles: any = {
   ComboBox: {
     styles: ComboBoxStyles
   },
-  CompactPeoplePicker: {
-    styles: BasePickerStyles
-  },
+  // CompactPeoplePicker: {
+  //   styles: BasePickerStyles
+  // },
   ContextualMenu: {
     styles: ContextualMenuStyles
   },
-  DatePicker: {
-    styles: DatePickerStyles
-  },
+  // DatePicker: {
+  //   styles: DatePickerStyles
+  // },
   DefaultButton: {
     styles: DefaultButtonStyles
   },
@@ -124,21 +124,21 @@ export const FluentStyles: any = {
   Link: {
     styles: LinkStyles
   },
-  ListPeoplePickerBase: {
-    styles: BasePickerStyles
-  },
+  // ListPeoplePickerBase: {
+  //   styles: BasePickerStyles
+  // },
   Modal: {
     styles: ModalStyles
   },
   Panel: {
     styles: PanelStyles
   },
-  NormalPeoplePicker: {
-    styles: BasePickerStyles
-  },
-  PeoplePickerItem: {
-    styles: PeoplePickerItemStyles
-  },
+  // NormalPeoplePicker: {
+  //   styles: BasePickerStyles
+  // },
+  // PeoplePickerItem: {
+  //   styles: PeoplePickerItemStyles
+  // },
   Persona: {
     styles: PersonaStyles
   },
@@ -163,18 +163,18 @@ export const FluentStyles: any = {
   SpinButton: {
     styles: SpinButtonStyles
   },
-  Suggestions: {
-    styles: SuggestionsStyles
-  },
-  SuggestionItem: {
-    styles: SuggestionItemStyles
-  },
-  TagItem: {
-    styles: TagItemStyles
-  },
-  TagPicker: {
-    styles: BasePickerStyles
-  },
+  // Suggestions: {
+  //   styles: SuggestionsStyles
+  // },
+  // SuggestionItem: {
+  //   styles: SuggestionItemStyles
+  // },
+  // TagItem: {
+  //   styles: TagItemStyles
+  // },
+  // TagPicker: {
+  //   styles: BasePickerStyles
+  // },
   TeachingBubble: {
     styles: TeachingBubbleStyles
   },

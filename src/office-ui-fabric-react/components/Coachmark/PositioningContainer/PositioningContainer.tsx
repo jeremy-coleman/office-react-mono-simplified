@@ -360,6 +360,7 @@ export class PositioningContainer extends BaseComponent<IPositioningContainerPro
         this._target = currentDoc ? (currentDoc.querySelector(target) as HTMLElement) : null;
         this._targetWindow = getWindow()!;
       } else if ((target as MouseEvent).stopPropagation) {
+        //@ts-ignore
         this._targetWindow = getWindow((target as MouseEvent).toElement as HTMLElement)!;
         this._target = target;
       } else if ((target as IPoint).x !== undefined && (target as IPoint).y !== undefined) {

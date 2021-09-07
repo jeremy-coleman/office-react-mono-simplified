@@ -103,7 +103,7 @@ export class PersonaCoinBase extends BaseComponent<IPersonaCoinProps, IPersonaSt
               <div
                 className={mergeStyles(
                   classNames.initials,
-                  !showUnknownPersonaCoin && { backgroundColor: initialsColorPropToColorCode(this.props) }
+                  !showUnknownPersonaCoin && { backgroundColor: initialsColorPropToColorCode(this.props as any) }
                 )}
                 style={coinSizeStyle}
                 aria-hidden="true"

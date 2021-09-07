@@ -4,22 +4,20 @@ import { IColorSliderProps, IColorSliderStyleProps, IColorSliderStyles } from '.
 
 const getClassNames = classNamesFunction<IColorSliderStyleProps, IColorSliderStyles>();
 
-/**
- * {@docCategory ColorPicker}
- */
-export interface IColorSliderProps {
-  componentRef?: () => void;
-  minValue?: number;
-  maxValue?: number;
-  value?: number;
-  thumbColor?: string;
-  overlayStyle?: any;
-  onChange?: (event: React.MouseEvent<HTMLElement>, newValue?: number) => void;
-  onChanged?: (newValue: number) => void;
 
-  className?: string;
-  style?: any;
-}
+// export interface IColorSliderProps {
+//   componentRef?: () => void;
+//   minValue?: number;
+//   maxValue?: number;
+//   value?: number;
+//   thumbColor?: string;
+//   overlayStyle?: any;
+//   onChange?: (event: React.MouseEvent<HTMLElement>, newValue?: number) => void;
+//   onChanged?: (newValue: number) => void;
+
+//   className?: string;
+//   style?: any;
+// }
 
 export interface IColorSliderState {
   isAdjusting?: boolean;

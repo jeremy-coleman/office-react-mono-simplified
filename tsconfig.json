@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "rootDir": "./src",
     "declaration": true,
     "outDir": "lib",
     "target": "esnext",
@@ -14,7 +13,7 @@
     "moduleResolution": "node",
     "preserveConstEnums": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["es2018", "dom"],
+    "lib": ["esnext", "dom"],
     "skipLibCheck": true,
   },
   "include": ["./src"],

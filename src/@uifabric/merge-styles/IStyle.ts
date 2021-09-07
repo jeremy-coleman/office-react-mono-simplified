@@ -1,7 +1,4 @@
 import { IRawStyleBase } from './IRawStyleBase';
-import { IStyle, IStyleFunction, IStyleFunctionOrObject } from './IStyle';
-
-
 
 /**
  * A style function takes in styleprops and returns a partial styleset.

@@ -87,6 +87,7 @@ export class List<T = any> extends BaseComponent<IListProps<T>, IListState<T>> i
     renderedWindowsBehind: DEFAULT_RENDERED_WINDOWS_BEHIND
   };
 
+  //@ts-ignore
   public refs: {
     [key: string]: React.ReactInstance;
   };

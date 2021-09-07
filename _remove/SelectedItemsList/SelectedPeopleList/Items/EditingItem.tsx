@@ -134,6 +134,7 @@ export class EditingItem extends BaseComponent<IEditingSelectedPeopleItemProps, 
   }
 
   private _onSuggestionSelected = (item: IExtendedPersonaProps): void => {
+    //@ts-ignore
     this.props.onEditingComplete(this.props.item, item);
   };
 }

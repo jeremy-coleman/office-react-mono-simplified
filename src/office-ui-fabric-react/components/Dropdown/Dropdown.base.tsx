@@ -436,7 +436,7 @@ export class DropdownBase extends React.Component<IDropdownInternalProps, IDropd
   };
 
   /** Render Callout or Panel container and pass in list */
-  private _onRenderContainer = (props: IDropdownProps): JSX.Element => {
+  private _onRenderContainer = (props: IDropdownProps, renderFunction?: any): JSX.Element => {
     const { responsiveMode, calloutProps, panelProps, dropdownWidth } = this.props;
 
     const isSmall = responsiveMode! <= ResponsiveMode.medium;
@@ -502,7 +502,7 @@ export class DropdownBase extends React.Component<IDropdownInternalProps, IDropd
   }
 
   /** Render List of items */
-  private _onRenderList = (props: IDropdownProps): JSX.Element => {
+  private _onRenderList = (props: IDropdownProps, renderFunction?: any): JSX.Element => {
     const { onRenderItem = this._onRenderItem } = this.props;
 
     return <>{this.props.options.map((item: any, index: number) => onRenderItem({ ...item, index }, this._onRenderItem))}</>;
